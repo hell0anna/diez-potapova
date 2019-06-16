@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
   <title>Diez — школа музыкального искусства</title>
+  <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
@@ -12,28 +13,32 @@
 
 		<!-- ШАПОЧКА -->
 
-		<header class="container header-wrapper">
-			<div class="row">
-				<div class="col col--lg-1">
-					<img src="./images/diez-logo.png" class="logo" alt="Логотип Diez">
-				</div>
-				<div class="col col--lg-3">
-					<nav class="main-nav">
-						<ul class="main-nav__list">
-							<li class="main-nav__item">
-								<a href="#" class="main-nav__link">Направление</a>
-							</li>
-							<li class="main-nav__item">
-								<a href="#" class="main-nav__link">О школе</a>
-							</li>
-							<li class="main-nav__item">
-								<a href="#" class="main-nav__link">Видео</a>
-							</li>
-							<li class="main-nav__item">
-								<a href="#" class="main-nav__link">Контакты</a>
-							</li>
-						</ul>
-					</nav>	
+		<header class="header-wrapper">
+			<div class="container">
+				<div class="row">
+					<div class="col col--lg-1">
+						<img src="./images/diez-logo.png" class="logo" alt="Логотип Diez">
+					</div>
+					<div class="col col--lg-3">
+						<nav class="main-nav">
+							<ul class="main-nav__list">
+								<li class="main-nav__item">
+									<a href="#" class="main-nav__link">Направление</a>
+								</li>
+								<li class="main-nav__item">
+									<a href="#" class="main-nav__link">О школе</a>
+								</li>
+								<li class="main-nav__item">
+									<a href="#" class="main-nav__link">Видео</a>
+								</li>
+								<li class="main-nav__item">
+									<a href="#" class="main-nav__link">Контакты</a>
+								</li>
+							</ul>
+						</nav>
+						<!-- бургер -->
+						<button class="toggler"><span></span></button>	
+					</div>
 				</div>
 			</div>
 		</header>
@@ -41,32 +46,34 @@
 		<!-- ПРОМО-БЛОК -->
 
 		<main>
-			<section class="container  promo__wrapper">
-				<div class="row">
-					<div class="col  col--lg-3"> 
-						<div class="promo__header__text">
-							<h1 class="promo__header">Diez — школа музыкального искусства</h1>
-							<p class="promo__lead">Научим петь, играть на инструментах, не бояться сцены и получать удовольствие от музыки</p>	
-						</div>
-					</div>
-					<div class="col  col--lg-1">
-						<div class="form">
-							<div class="form__lead">
-								<h3 class="form__header">Вводный урок</h3>
-								<p>Попробуй любые направления  бесплатно</p>
+			<section class="promo__wrapper">
+				<div class="container">
+					<div class="row">
+						<div class="col  col--lg-3"> 
+							<div class="promo-header__wrapper">
+								<h1 class="promo-header">Diez — школа музыкального искусства</h1>
+								<p class="promo-header__lead">Научим петь, играть на инструментах, не бояться сцены и получать удовольствие от музыки</p>	
 							</div>
-							<form action="#">
-								<label for="name">Имя</label>
-								<input id="name" type="text" placeholder="Имя" title="Укажите имя" required>
+						</div>
+						<div class="col  col--lg-1">
+							<div class="form-wrapper">
+								<div class="form-lead">
+									<h3 class="form-lead__header">Вводный урок</h3>
+									<p>Попробуй любые направления  бесплатно</p>
+								</div>
+								<form action="#" class="form">
+									<label for="name">Имя</label>
+									<input id="name" type="text" placeholder="Имя" title="Укажите имя" required class="form-input__name">
 
-								<label for="tel">Телефон</label>
-								<input id="tel" type="tel" pattern="[0-9]{7,13}" placeholder="Телефон" title="Укажите телефон" required>
-							<!-- тут должен быть выпадающий список -->
-								<label for="course">Направление</label>
-								<input id="course" type="text" placeholder="Направление" title="Выберете направление">
-	
-								<button type="submit">Записаться</button>
-							</form>
+									<label for="tel">Телефон</label>
+									<input id="tel" type="tel" placeholder="Телефон" title="Укажите телефон" required class="form-input__tel">
+								<!-- тут должен быть выпадающий список -->
+									<label for="course">Направление</label>
+									<input id="course" type="text" placeholder="Направление" title="Выберете направление" class="form-input__course">
+					
+									<button type="submit" class="button button_active">Записаться</button>
+								</form>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -74,173 +81,193 @@
 
 			<!-- НАПРАВЛЕНИЯ -->
 
-			<section class="container courses">
-				<div class="row">
-					<h2 class="section-header">Растим музыкантов</h2>
-					<div class="col  col--lg-2  col--lg-pl">
-						<h3 class="sub-header">Гитара</h3>
-						<p class="text--color">Хочешь играть как Джими Хендрикс, Би Би Кинг или Андрес Сеговия— мы научим</p>
-					</div>
-					<div class="vocal col  col--lg-2">
-						<h3 class="sub-header">Вокал</h3>
-						<p class="text--color">Академический, рок, эстрадный, джазовый</p>
-					</div>
-					<div class="fortepiano col  col--lg-2  col--lg-pl">
-						<h3 class="sub-header">Фортепиано</h3>
-						<p class="text--color">Академический, рок, эстрадный, джазовый</p>
-					</div>
-					<div class="lections col  col--lg-1">
-						<h3 class="sub-header">Лекции</h3>
-						<p class="text--color">Подтяни свои знания в теории музыки</p>
-					</div>
-					<div class="all-courses col  col--lg-1">
-						<a href="#" class="link-active">
-							<h3 class="sub-header--c">Все направления</h3>
-						</a>
+			<section class="courses">
+				<div class="container">
+					<div class="row">
+						<h2 class="section-header">Растим музыкантов</h2>
+						<div class="col  col--lg-2  col--lg-pl">
+							<div class="guitar-wrapper">
+								<h3 class="sub-header">Гитара</h3>
+								<p class="text--color">Хочешь играть как Джими Хендрикс, Би Би Кинг или Андрес Сеговия— мы научим</p>
+							</div>
+						</div>
+						<div class="col  col--lg-2">
+							<div class="vocal-wrapper">
+								<h3 class="sub-header">Вокал</h3>
+								<p class="text--color">Академический, рок, эстрадный, джазовый</p>
+							</div>
+						</div>
+						<div class="col  col--lg-2  col--lg-pl">
+							<div class="fortepiano-wrapper">
+								<h3 class="sub-header">Фортепиано</h3>
+								<p class="text--color">Академический, рок, эстрадный, джазовый</p>
+							</div>
+						</div>
+						<div class="col  col--lg-1">
+							<div class="lections-wrapper">
+								<h3 class="sub-header">Лекции</h3>
+								<p class="text--color">Подтяни свои знания в теории музыки</p>
+							</div>
+						</div>
+						<div class="col  col--lg-1">
+							<div class="all-courses-wrapper">
+								<a href="#" class="link-active">
+									<h3 class="sub-header--c">Все направления</h3>
+								</a>
+							</div>
+						</div>
 					</div>
 				</div>
 			</section>
 
 			<!-- О ШКОЛЕ -->
 
-			<section class="container about">
-				<div class="row">
-					<div class="col  col--lg-2">
-						<div class="row">
-							<div class="col  col--lg-4">
-								<h2 class="section-header">Задаем темп</h2>
-							</div>
-							<div class="col  col--lg-2">
-								<div class="team">
-									<h3 class="sub-header">Состав</h3>
-									<p class="text--color">Тебя будут обучать  профессионалы с высшим музыкальным образованием</p>
+			<section class="about">
+				<div class="container">
+					<div class="row">
+						<div class="col  col--lg-2">
+							<div class="row">
+								<div class="col  col--lg-4">
+									<h2 class="section-header">Задаем темп</h2>
 								</div>
-							</div>
-							<div class="col  col--lg-2">
-								<div class="results">	
-									<h3 class="sub-header">Результаты</h3>
-									<p class="text--color">Выступи на отчетном концерте через три месяца обучения</p>
+								<div class="col  col--lg-2">
+									<div class="team-wrapper">
+										<h3 class="sub-header">Состав</h3>
+										<p class="text--color">Тебя будут обучать  профессионалы с высшим музыкальным образованием</p>
+									</div>
+								</div>
+								<div class="col  col--lg-2">
+									<div class="results-wrapper">	
+										<h3 class="sub-header">Результаты</h3>
+										<p class="text--color">Выступи на отчетном концерте через три месяца обучения</p>
+									</div>
 								</div>
 							</div>
 						</div>
-					</div>
-					<div class="col  col--lg-1">
-						<div class="studio">
-							<h3 class="sub-header">Состав</h3>
-							<p class="text--c">Тебя будут обучать  профессионалы с высшим музыкальным образованием</p>
-						</div>
-					</div>
-					
-					<div class="col  col--lg-1">
-						<div class="form">
-							<div class="form-lead">
-								<h3 class="sub-header--c">Вводный урок</h3>
-								<p>Попробуй любые направления  бесплатно</p>
+						<div class="col  col--lg-1">
+							<div class="studio-wrapper">
+								<h3 class="sub-header">Состав</h3>
+								<p class="text--c">Тебя будут обучать  профессионалы с высшим музыкальным образованием</p>
 							</div>
-							<form action="#">
-								<label for="name">Имя</label>
-								<input id="name" type="text" placeholder="Имя" title="Укажите имя" required>
+						</div>
+						
+						<div class="col  col--lg-1">
+							<div class="form-wrapper">
+								<div class="form-lead">
+									<h3 class="form-lead__header">Вводный урок</h3>
+									<p>Попробуй любые направления  бесплатно</p>
+								</div>
+								<form action="#" class="form">
+									<label for="name">Имя</label>
+									<input id="name" type="text" placeholder="Имя" title="Укажите имя" required class="form-input__name">
 
-								<label for="tel">Телефон</label>
-								<input id="tel" type="tel" pattern="[0-9]{7,13}" placeholder="Телефон" title="Укажите телефон" required>
-							<!-- тут должен быть выпадающий список -->
-								<label for="course">Направление</label>
-								<input id="course" type="text" placeholder="Направление" title="Выберете направление">
-	
-								<button type="submit">Записаться</button>
-							</form>
-						</div>
-					</div>	
+									<label for="tel">Телефон</label>
+									<input id="tel" type="tel" placeholder="Телефон" title="Укажите телефон" required class="form-input__tel">
+								<!-- тут должен быть выпадающий список -->
+									<label for="course">Направление</label>
+									<input id="course" type="text" placeholder="Направление" title="Выберете направление" class="form-input__course">
+					
+									<button type="submit" class="button button_active">Записаться</button>
+								</form>
+							</div>
+						</div>	
+					</div>
 				</div>
+				
 			</section>
 
 			<!-- ВИДЕО -->
 
-			<section class="container video">
-				<div class="row">
-					<div class="col  col--lg-3"> 
-						<div class="row">
-							<h2 class="section-header">В стенах школы</h2>
-							<!-- большое видео -->
-							<div class="col  col--lg-4 col--lg-pl">
-								<div class="video-wrapper">
-									<!-- ///////// -->
-									<h3 class="sub-header">Зимняя вишня</h3>
-									<p class="text--c">Заключительный зимний концерт 2017 года выступало 97 учеников</p>
+			<section class="video">
+				<div class="container">
+					<div class="row">
+						<div class="col  col--lg-3"> 
+							<div class="row">
+								<h2 class="section-header">В стенах школы</h2>
+								<!-- большое видео -->
+								<div class="col  col--lg-4 col--lg-pl">
+									<div class="video-wrapper">
+										<!-- ///////// -->
+										<h3 class="sub-header">Зимняя вишня</h3>
+										<p class="text--c">Заключительный зимний концерт 2017 года выступало 97 учеников</p>
+									</div>
 								</div>
 							</div>
 						</div>
+						<!-- маленькие видео -->
+						<div class="col col--lg-1">
+							<div class="row">
+								<div class="col  col--lg-4">
+									<div class="small-video-wrapper">
+										<!-- /////// -->
+										<h4 class="video-prev__header">Янг Чжо</h4>
+										<p class="text--c-fsz">Репетиция сольной партии скрипки</p>
+									</div>
+								</div>
+								<div class="col  col--lg-4">
+									<div class="small-video-wrapper">
+										<!-- /////// -->
+										<h4 class="video-prev__header">Летний штиль</h4>
+										<p class="text__color-font-size">За кулисами концерта</p>
+									</div>
+								</div>
+								<div class="col  col--lg-4">
+									<div class="small-video-wrapper">
+										<!-- /////// -->
+										<h4 class="video-prev__header">Сергей Трофимов</h4>
+										<p class="text--c-fsz">ЛЮБЭ — Выйду в поле с конем</p>
+									</div>
+								</div>	
+							</div>
+						</div>					
 					</div>
-					<!-- маленькие видео -->
-					<div class="col col--lg-1">
-						<div class="row">
-							<div class="col  col--lg-4">
-								<div class="small-video-wrapper">
-									<!-- /////// -->
-									<h4 class="video-prev-header">Янг Чжо</h4>
-									<p class="text--c-fsz">Репетиция сольной партии скрипки</p>
-								</div>
-							</div>
-							<div class="col  col--lg-4">
-								<div class="small-video-wrapper">
-									<!-- /////// -->
-									<h4 class="video-prev-header">Летний штиль</h4>
-									<p class="text--c-fsz">За кулисами концерта</p>
-								</div>
-							</div>
-							<div class="col  col--lg-4">
-								<div class="small-video-wrapper">
-									<!-- /////// -->
-									<h4 class="video-prev-header">Сергей Трофимов</h4>
-									<p class="text--c-fsz">ЛЮБЭ — Выйду в поле с конем</p>
-								</div>
-							</div>	
-						</div>
-					</div>					
 				</div>
+				
 			</section>
 
 			<!-- КОНТАКТЫ -->
 
-			<section class="container  contacts">
-				<div class="row">
-					<div class="col  col--lg-3"> 
-						<div class="row">
-							<div class="col  col--lg-3">
-								<h2 class="section-header">Ждем тебя</h2>
-							</div>
-							<div class="col  col--lg-1">
-								<div class="adress">
-									<p>+7 (812) 566-56-56<br>
-									СПБ, 6-я Линия ВО, 42</p>
+			<section class="contacts">
+				<div class="container">
+					<div class="row">
+						<div class="col  col--lg-3"> 
+							<div class="row">
+								<div class="col  col--lg-3">
+									<h2 class="section-header">Ждем тебя</h2>
 								</div>
-							</div>
-							<div class="col  col--lg-4">
-								<div class="map-wrapper">
-									<!-- map script -->
+								<div class="col  col--lg-1">
+									<div class="adress-wrapper">
+										<p>+7 (812) 566-56-56<br>
+										СПБ, 6-я Линия ВО, 42</p>
+									</div>
+								</div>
+								<div class="col  col--lg-4">
+									<div class="map-wrapper">
+										<!-- map script -->
+									</div>
 								</div>
 							</div>
 						</div>
-					</div>
-					<!-- форма -->
-					<div class="col  col--lg-1">
-						<div class="form">
-							<div class="form-lead">
-								<h3 class="sub-header--c">Вводный урок</h3>
-								<p>Попробуй любые направления  бесплатно</p>
-							</div>
-							<form action="#">
-								<label for="name">Имя</label>
-								<input id="name" type="text" placeholder="Имя" title="Укажите имя" required>
+						<!-- форма -->
+						<div class="col  col--lg-1">
+							<div class="form-wrapper">
+								<div class="form-lead">
+									<h3 class="form-lead__header">Вводный урок</h3>
+									<p>Попробуй любые направления  бесплатно</p>
+								</div>
+								<form action="#" class="form">
+									<label for="name">Имя</label>
+									<input id="name" type="text" placeholder="Имя" title="Укажите имя" required class="form-input__name">
 
-								<label for="tel">Телефон</label>
-								<input id="tel" type="tel" pattern="[0-9]{7,13}" placeholder="Телефон" title="Укажите телефон" required>
-							<!-- тут должен быть выпадающий список -->
-								<label for="course">Направление</label>
-								<input id="course" type="text" placeholder="Направление" title="Выберете направление">
-	
-								<button type="submit">Записаться</button>
-							</form>
+									<label for="tel">Телефон</label>
+									<input id="tel" type="tel" pattern="[0-9]{7,13}" placeholder="Телефон" title="Укажите телефон" required class="form-input__tel">
+								<!-- тут должен быть выпадающий список -->
+									<label for="course">Направление</label>
+									<input id="course" type="text" placeholder="Направление" title="Выберете направление" class="form-input__course">
+					
+									<button type="submit" class="button button_active">Записаться</button>
+								</form>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -249,18 +276,20 @@
 
 		<!-- ФУТЕРОЧЕК -->
 	
-		<footer class="container footer-wrapper">
-			<div class="row">
-				<div class="col col--lg-1">
-					<img src="./images/diez-logo.png" class="logo" alt="Логотип Diez">
-				</div>
-				<div class="col col--lg-3">
-					<ul class="social-list">
-						<li class="social-item"><a href="#" class="link-active">YOUTUBE</a></li>
-						<li class="social-item"><a href="#" class="link-active">INSTAGRAM</a></li>
-						<li class="social-item"><a href="#" class="link-active">FACEBOOK</a></li>
-						<li class="social-item"><a href="#" class="link-active">VKONTAKTE</a></li>
-					</ul>
+		<footer class="footer-wrapper">
+			<div class="container">
+				<div class="row">
+					<div class="col col--lg-1">
+						<img src="./images/diez-logo.png" class="logo" alt="Логотип Diez">
+					</div>
+					<div class="col col--lg-3">
+						<ul class="social__list">
+							<li class="social__item"><a href="#" class="link-active">YOUTUBE</a></li>
+							<li class="social__item"><a href="#" class="link-active">INSTAGRAM</a></li>
+							<li class="social__item"><a href="#" class="link-active">FACEBOOK</a></li>
+							<li class="social__item"><a href="#" class="link-active">VKONTAKTE</a></li>
+						</ul>
+					</div>
 				</div>
 			</div>
 		</footer>
