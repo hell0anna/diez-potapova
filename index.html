@@ -8,6 +8,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
+	<!-- скрипты -->
+	<script src="js/jquery-3.4.1.min.js"></script>
+	<script src="js/script.js"></script>
 	
 	<div class="all-wrapper">
 
@@ -17,11 +20,15 @@
 			<div class="container">
 				<div class="row">
 					<div class="col col--lg-1">
-						<img src="./images/diez-logo.png" class="logo" alt="Логотип Diez">
+						<div class="logo-wrapper"><span class="diez-logo">Diez</span></div>
+						
+						<!-- <img src="./images/diez-logo.png" class="logo" alt="Логотип Diez"> -->
 					</div>
 					<div class="col col--lg-3">
+						<!-- бургер -->	
+						<button class="toggler" id="toggler"><span></span></button>
 						<nav class="main-nav">
-							<ul class="main-nav__list">
+							<ul class="main-nav__list" id="nav">
 								<li class="main-nav__item">
 									<a href="#" class="main-nav__link">Направление</a>
 								</li>
@@ -36,8 +43,6 @@
 								</li>
 							</ul>
 						</nav>
-						<!-- бургер -->
-						<button class="toggler"><span></span></button>	
 					</div>
 				</div>
 			</div>
@@ -51,11 +56,14 @@
 					<div class="row">
 						<div class="col  col--lg-3"> 
 							<div class="promo-header__wrapper">
-								<h1 class="promo-header">Diez — школа музыкального искусства</h1>
+								<h1 class="promo-header">Школа музыкального искусства</h1>
 								<p class="promo-header__lead">Научим петь, играть на инструментах, не бояться сцены и получать удовольствие от музыки</p>	
 							</div>
 						</div>
 						<div class="col  col--lg-1">
+							<div class="promo__button_320">
+								<button type="submit" class="button button_active">Вводный урок</button>
+							</div>
 							<div class="form-wrapper">
 								<div class="form-lead">
 									<h3 class="form-lead__header">Вводный урок</h3>
@@ -86,36 +94,37 @@
 					<div class="row">
 						<h2 class="section-header">Растим музыкантов</h2>
 						<div class="col  col--lg-2  col--lg-pl">
-							<div class="guitar-wrapper">
+							<div class="cource-wrapper guitar ">
 								<h3 class="sub-header">Гитара</h3>
-								<p class="text--color">Хочешь играть как Джими Хендрикс, Би Би Кинг или Андрес Сеговия— мы научим</p>
+								<p class="text js-text-guitar">Хочешь играть как Джими Хендрикс, Би Би Кинг или Андрес Сеговия— мы научим</p>
 							</div>
 						</div>
 						<div class="col  col--lg-2">
-							<div class="vocal-wrapper">
+							<div class="cource-wrapper vocal">
 								<h3 class="sub-header">Вокал</h3>
-								<p class="text--color">Академический, рок, эстрадный, джазовый</p>
+								<p class="text js-text-vocal">Академический, рок, эстрадный, джазовый</p>
 							</div>
 						</div>
-						<div class="col  col--lg-2  col--lg-pl">
-							<div class="fortepiano-wrapper">
-								<h3 class="sub-header">Фортепиано</h3>
-								<p class="text--color">Академический, рок, эстрадный, джазовый</p>
+						<div class="right-col-wrapper">
+							<div class="col  col--lg-2  col--lg-pl col--sm-pr">
+								<div class="cource-wrapper fortepiano">
+									<h3 class="sub-header">Фортепиано</h3>
+									<p class="text js-text-fortepiano">Академический, рок, эстрадный, джазовый</p>
+								</div>
+							</div>
+							<div class="col  col--lg-1">
+								<div class="cource-wrapper lections">
+									<h3 class="sub-header">Лекции</h3>
+									<p class="text">Подтяни свои знания в теории музыки</p>
+								</div>
+							</div>
+							<div class="col  col--lg-1">
+								<div class="all-courses-wrapper">
+									<a href="#" class="link-active">Все направления</a>
+								</div>
 							</div>
 						</div>
-						<div class="col  col--lg-1">
-							<div class="lections-wrapper">
-								<h3 class="sub-header">Лекции</h3>
-								<p class="text--color">Подтяни свои знания в теории музыки</p>
-							</div>
-						</div>
-						<div class="col  col--lg-1">
-							<div class="all-courses-wrapper">
-								<a href="#" class="link-active">
-									<h3 class="sub-header--c">Все направления</h3>
-								</a>
-							</div>
-						</div>
+						
 					</div>
 				</div>
 			</section>
@@ -124,6 +133,7 @@
 
 			<section class="about">
 				<div class="container">
+					<!-- <h2 class="section-header">Задаем темп</h2> -->
 					<div class="row">
 						<div class="col  col--lg-2">
 							<div class="row">
@@ -131,28 +141,40 @@
 									<h2 class="section-header">Задаем темп</h2>
 								</div>
 								<div class="col  col--lg-2">
-									<div class="team-wrapper">
+									<div class="about-item__wrapper team">
 										<h3 class="sub-header">Состав</h3>
-										<p class="text--color">Тебя будут обучать  профессионалы с высшим музыкальным образованием</p>
+										<p class="text">Тебя будут обучать  профессионалы с высшим музыкальным образованием</p>
 									</div>
 								</div>
 								<div class="col  col--lg-2">
-									<div class="results-wrapper">	
+									<div class="about-item__wrapper results">	
 										<h3 class="sub-header">Результаты</h3>
-										<p class="text--color">Выступи на отчетном концерте через три месяца обучения</p>
+										<p class="text">Выступи на отчетном концерте через три месяца обучения</p>
 									</div>
 								</div>
 							</div>
 						</div>
-						<div class="col  col--lg-1">
-							<div class="studio-wrapper">
-								<h3 class="sub-header">Состав</h3>
-								<p class="text--c">Тебя будут обучать  профессионалы с высшим музыкальным образованием</p>
+						<div class="col col--lg-4">
+							<div class="row">
+								<div class="col  col--lg-2  col--sm-pr">
+									<div class="about-item__wrapper studio">
+										<h3 class="sub-header">Состав</h3>
+										<p class="text">Тебя будут обучать  профессионалы с высшим музыкальным образованием</p>
+									</div>
+								</div>
+									<!-- ?????? как спозиционировать кнопку ????? -->
+								<div class="col  col--lg-2">
+									<div class="button__form-unactive">
+										<a href="#" class="link-active">Вводный урок</a>
+									</div>
+								</div>
 							</div>
 						</div>
+
+
 						
 						<div class="col  col--lg-1">
-							<div class="form-wrapper">
+							<div class="about-item__wrapper form-wrapper">
 								<div class="form-lead">
 									<h3 class="form-lead__header">Вводный урок</h3>
 									<p>Попробуй любые направления  бесплатно</p>
@@ -183,13 +205,14 @@
 					<div class="row">
 						<div class="col  col--lg-3"> 
 							<div class="row">
-								<h2 class="section-header">В стенах школы</h2>
+								<!-- <h2 class="section-header">В стенах школы</h2> -->
 								<!-- большое видео -->
 								<div class="col  col--lg-4 col--lg-pl">
-									<div class="video-wrapper">
+									<h2 class="section-header">В стенах школы</h2>
+									<div class="video-wrapper video-wrapper__big ">
 										<!-- ///////// -->
 										<h3 class="sub-header">Зимняя вишня</h3>
-										<p class="text--c">Заключительный зимний концерт 2017 года выступало 97 учеников</p>
+										<p class="text">Заключительный зимний концерт 2017 года выступало 97 учеников</p>
 									</div>
 								</div>
 							</div>
@@ -198,24 +221,24 @@
 						<div class="col col--lg-1">
 							<div class="row">
 								<div class="col  col--lg-4">
-									<div class="small-video-wrapper">
+									<div class="video-wrapper video-wrapper__hide">
 										<!-- /////// -->
 										<h4 class="video-prev__header">Янг Чжо</h4>
-										<p class="text--c-fsz">Репетиция сольной партии скрипки</p>
+										<p class="text__font-size">Репетиция сольной партии скрипки</p>
 									</div>
 								</div>
 								<div class="col  col--lg-4">
-									<div class="small-video-wrapper">
+									<div class="video-wrapper video-wrapper__hide">
 										<!-- /////// -->
 										<h4 class="video-prev__header">Летний штиль</h4>
-										<p class="text__color-font-size">За кулисами концерта</p>
+										<p class="text__font-size">За кулисами концерта</p>
 									</div>
 								</div>
 								<div class="col  col--lg-4">
-									<div class="small-video-wrapper">
+									<div class="video-wrapper video-wrapper__hide">
 										<!-- /////// -->
 										<h4 class="video-prev__header">Сергей Трофимов</h4>
-										<p class="text--c-fsz">ЛЮБЭ — Выйду в поле с конем</p>
+										<p class="text__font-size">ЛЮБЭ — Выйду в поле с конем</p>
 									</div>
 								</div>	
 							</div>
@@ -237,13 +260,14 @@
 								</div>
 								<div class="col  col--lg-1">
 									<div class="adress-wrapper">
-										<p>+7 (812) 566-56-56<br>
+										<p class="text text__color">+7 (812) 566-56-56<br>
 										СПБ, 6-я Линия ВО, 42</p>
 									</div>
 								</div>
 								<div class="col  col--lg-4">
-									<div class="map-wrapper">
+									<div id="map" class="map-wrapper js-map">
 										<!-- map script -->
+										<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
 									</div>
 								</div>
 							</div>
