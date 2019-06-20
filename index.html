@@ -27,8 +27,8 @@
 					<div class="col col--lg-3">
 						<!-- бургер -->	
 						<button class="toggler" id="toggler"><span></span></button>
-						<nav class="main-nav">
-							<ul class="main-nav__list" id="nav">
+						<nav class="main-nav" id="main-nav">
+							<ul class="main-nav__list" id="main-nav__list">
 								<li class="main-nav__item">
 									<a href="#" class="main-nav__link">Направление</a>
 								</li>
@@ -55,7 +55,7 @@
 				<div class="container">
 					<div class="row">
 						<div class="col  col--lg-3"> 
-							<div class="promo-header__wrapper">
+							<div class="promo-text__wrapper">
 								<h1 class="promo-header">Школа музыкального искусства</h1>
 								<p class="promo-header__lead">Научим петь, играть на инструментах, не бояться сцены и получать удовольствие от музыки</p>	
 							</div>
@@ -96,7 +96,7 @@
 						<div class="col  col--lg-2  col--lg-pl">
 							<div class="cource-wrapper guitar ">
 								<h3 class="sub-header">Гитара</h3>
-								<p class="text js-text-guitar">Хочешь играть как Джими Хендрикс, Би Би Кинг или Андрес Сеговия— мы научим</p>
+								<p class="text js-text-guitar"><span class="text__hide-320">Хочешь</span><span class="text__show-320">Начни</span> играть как Джими Хендрикс<span class="text__hide-320">, Би Би Кинг или Андрес Сеговия— мы научим</span></p>
 							</div>
 						</div>
 						<div class="col  col--lg-2">
@@ -106,7 +106,7 @@
 							</div>
 						</div>
 						<div class="right-col-wrapper">
-							<div class="col  col--lg-2  col--lg-pl col--sm-pr">
+							<div class="col  col--lg-2  col--lg-pl">
 								<div class="cource-wrapper fortepiano">
 									<h3 class="sub-header">Фортепиано</h3>
 									<p class="text js-text-fortepiano">Академический, рок, эстрадный, джазовый</p>
@@ -118,11 +118,9 @@
 									<p class="text">Подтяни свои знания в теории музыки</p>
 								</div>
 							</div>
-							<div class="col  col--lg-1">
-								<div class="all-courses-wrapper">
+								<div class="cource-wrapper  all-courses-wrapper">
 									<a href="#" class="link-active">Все направления</a>
 								</div>
-							</div>
 						</div>
 						
 					</div>
@@ -154,7 +152,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="col col--lg-4">
+						<div class="col col--lg-2">
 							<div class="row">
 								<div class="col  col--lg-2  col--sm-pr">
 									<div class="about-item__wrapper studio">
@@ -206,6 +204,8 @@
 						<div class="col  col--lg-3"> 
 							<div class="row">
 								<!-- <h2 class="section-header">В стенах школы</h2> -->
+
+								<!-- !!!!! переверстать без оберток по колонкам !!! display:float на десктопе -->
 								<!-- большое видео -->
 								<div class="col  col--lg-4 col--lg-pl">
 									<h2 class="section-header">В стенах школы</h2>

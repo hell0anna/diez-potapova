@@ -31,7 +31,7 @@
 
 
 
-/*====== СТИЛИ ======*/
+/*====== СТИЛИ ======*/	
 
 
 
@@ -61,7 +61,17 @@ body {
   color: #fff;
 }
 
-/*------ общие стили для 320px------*/
+button {
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+
+  cursor: pointer;
+}
+
+/*--------------------------- общие стили для 320px --------------------------*/
 
 .logo-wrapper {
 	padding-top: 25px;
@@ -87,7 +97,7 @@ body {
 	padding-right: 76px;
 }
 
-/*----------*/
+/*----------------------------------------------------------*/
 
 .all-wrapper {
 	min-width: 300px;
@@ -99,15 +109,17 @@ body {
 	margin-right: 15px;
 }
 
-/*-------- ШАПОЧКА --------*/
-
-	
-
-.diez-logo {
-	font-family: "Prata", "Times", serif;
-	font-size: 30px;
-	color: #eec643;
+.text__hide-320 {
+	display: none;
 }
+
+.text__show-320 {
+	display: inline;
+}
+
+/*-------------------------------- ШАПОЧКА --------------------------------*/
+
+
 
 @media (min-width: 600px) {
   body {
@@ -116,14 +128,22 @@ body {
 }
 
 .header-wrapper {
-  background-color: #000;
+  /*background-color: #000;*/
   position: absolute;
   top: 0;
   right: 0;
   left: 0;
   height: 60px;
-
+	z-index: 1;
 }
+
+.diez-logo {
+	font-family: "Prata", "Times", serif;
+	font-size: 30px;
+	color: #eec643;
+}
+
+/*----------- бургер ---------*/
 
 @media (min-width: 600px) {
   .page-header {
@@ -191,7 +211,7 @@ body {
 .toggler--close > span:after {
   transform: rotate3d(0, 0, 1, -45deg);
 }
-.main-nav__list {
+.main-nav {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -200,9 +220,11 @@ body {
   right: 0;
   left: 0;
   display: none;
+  /*display: block;*/
 }
-.main-nav__list--visible {
+.main-nav--visible {
   display: block;
+  /*display: none;*/
 }
 
 @media (min-width: 600px) {
@@ -235,6 +257,7 @@ body {
   margin-bottom: 1px;
 }
 
+/*---------- конец бургера ----------*/
 
 
 /*-------- ПРОМО -------*/
@@ -242,9 +265,9 @@ body {
 .promo__wrapper {
 	position: relative;
 
-	display: flex;
+	/*display: flex;
   	flex-direction: column;
-  	justify-content: center;
+  	justify-content: center;*/
 
 	min-width: 320px;
 	min-height: 536px;
@@ -255,31 +278,25 @@ body {
 
 }
 
-/*.promo__wrapper:after {
-	content: '';
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	width: 100%;
-	height: 100%;
-	background-color: rgba(2, 26, 35, 0.35);
-	z-index: 2;
-}*/
-
+.promo__wrapper .container {
+	/*display: flex;
+	flex-direction: column;
+  	justify-content: center;*/
+	min-height: 536px;	
+}
 
 .promo-header {
 	margin-bottom: 0;
 	font-family: 'Prata', 'Times', serif;
 	font-size: 32px;
 	line-height: 42px;
+	/*????*/
+	font-style: normal;
+	font-weight: 400;
 }
 
-.promo-header__wrapper {
-	display: flex;
-  	flex-direction: column;
-  	justify-content: center;
+.promo-text__wrapper {
+	flex-grow: 5;
 }
 
 .promo-header__lead {
@@ -292,10 +309,16 @@ body {
 
 .button {
 	width: 100%;
+	flex-grow: 1;
+
+	height: 60px;
+
+	text-transform: uppercase;
+	background-color: #eec643;
 }
 
 
-/*------ НАПРАВЛЕНИЯ -------*/
+/*------------------------------ НАПРАВЛЕНИЯ -------------------------------*/
 
 .courses {
 	margin: 25px 0 30px 0;
@@ -320,11 +343,6 @@ body {
 	margin-bottom: 15px;
 
 	background-color: #021a23;
-}
-
-/*посмотреть как менять класс взависимости от ширины экрана*/
-.col--sm-pr {
-	padding-right: 76px;
 }
 
 .sub-header {
@@ -355,24 +373,29 @@ body {
 	background-size: cover;
 }
 
+.right-col-wrapper {
+	/*position: relative;*/
+	display: flex;
+	justify-content: space-between;
+}
+
+.right-col-wrapper .col:nth-child(2) {
+	display: none;
+}
+
 .lections {
 	display: none;
 }
-.right-col-wrapper {
-	position: relative;
-}
 
 .all-courses-wrapper {
-	position: absolute;
-	right: 0;
-	top: 0;
-	bottom: 0;
+	min-height: 60px;
 	height: 60px;
 
 	padding: 15px;
 	background-color: #eec643;
 
 	transform: rotate(-90deg);
+	transform-origin: center center;
 }
 
 .link-active {
@@ -384,7 +407,7 @@ body {
 }
 
 
-/*-------- О ШКОЛЕ -------*/
+/*-------------------------------- О ШКОЛЕ -------------------------------------*/
 
 .about {
 	margin: 25px 0 30px 0;
@@ -432,7 +455,7 @@ body {
 }
 
 
-/*---------- ВИДЕО ----------*/
+/*---------------------------------- ВИДЕО ----------------------------------*/
 
 .video {
 	margin: 25px 0 30px 0;
@@ -464,7 +487,7 @@ body {
 }
 
 
-/*-------- КОНТАКТЫ --------*/
+/*-------------------------------- КОНТАКТЫ --------------------------------*/
  
 .text__color {
 	color: #021a23;
@@ -480,7 +503,7 @@ body {
 }
 
 
-/* -----стили для lg 1280----- */
+/* ============================== стили для lg 1280 ============================== */
 
 
 
@@ -489,7 +512,7 @@ body {
 @media (min-width: 1200px) {
 
 	.container {
-	  max-width: 1200px;
+	  max-width: 1170px;
 	  margin: auto;
 	  padding: 0 15px;
 	/*  background-color: #ddd;*/
@@ -508,7 +531,8 @@ body {
 	  flex-grow: 0;
 	  flex-shrink: 0;
 	  width: 100%;
-	  border: 1px solid #000;
+	  /*border: 1px solid #000;*/
+	  margin-bottom: 15px;
 	}
 
 	.col--lg-1 { width: 25%; }
@@ -518,10 +542,31 @@ body {
 
 
 	.col--lg-pl {
-		padding-left: 80px;
+		padding-left: 100px;
 	}
 
+/*------------------------------ общие стили для 1200 -------------------------------*/
 
+	.text__hide-320 {
+		display: inline;
+	}
+
+	.text__show-320 {
+		display: none;
+	}
+
+	.section-header {
+		padding: 4px 10px 4px 0;
+		margin-bottom: 30px;	
+		font-size: 50px;
+		line-height: 50px;
+		letter-spacing: 2px;
+		/*?????*/
+		font-style: normal;
+		font-weight: 400;
+	}
+
+/*------------------------------ ШАПОЧКА -------------------------------*/
 
 	.main-nav__list {
 		display: flex;
@@ -545,5 +590,102 @@ body {
 		padding-right: 0;
 	} 
 
+
+/*------------------------------ ПРОМО -------------------------------*/
+	.promo__wrapper {
+		position: relative;
+
+		/*display: flex;
+	  	flex-direction: column;
+	  	justify-content: center;*/
+
+		min-height: 768px;
+
+		/*background: url(../img/promo-bg-1280.jpg) no-repeat center #021a23;*/
+		background: url(../img/promo-bg-1280.jpg) no-repeat center #021a23;
+		background-size: cover;
+	}
+
+/*------------------------------ НАПРАВЛЕНИЯ -------------------------------*/
+
+	.courses .row:first-child {
+		position: relative;
+	}
+
+	.courses .section-header {
+		position: absolute;
+		left: 15px;
+		bottom: -60px;
+
+		transform: rotate(-90deg);
+		transform-origin: top left;
+	}
+
+	.cource-wrapper {
+		min-height: 270px;
+
+		padding: 30px 200px 30px 30px;
+	}
+
+	.sub-header {
+		font-size: 30px;
+		line-height: 40px;
+	}
+
+	.right-col-wrapper .col:nth-child(2) {
+		display: block;
+	}
+
+	.lections {
+		display: block;
+		padding-right: 60px;
+
+		background-image: url(../img/courses-lections-bg.jpg);
+		background-size: cover;
+	}
+
+	.col--sm-pr {
+		padding-right: 15px;
+	}
+
+	.all-courses-wrapper {
+		position: static;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		height: 60px;
+
+		padding: 15px 60px 15px 15px;
+		background-color: #eec643;
+
+		transform: rotate(0deg);
+	}
+
+	.link-active {
+		color: #fff;
+		
+		font-size: 30px;
+		line-height: 40px;
+		font-weight: 700;
+		text-decoration: none;
+		text-transform: none;
+	}
+
+/*------------------------------ О ШКОЛЕ -------------------------------*/
+
+.about .container {
+	min-height: 568px;
+	
+}
+
+.about-item__wrapper {
+	min-height: 568px;
+	/*height: 100%;*/
+
+	padding: 30px 200px 30px 30px;
+}
+
+
+/*конец медиа*/
 }
 

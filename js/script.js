@@ -7,15 +7,35 @@ $(document).ready(function(){
 	// var postsText = $('.post p').prev(); 
 	// console.log(postsText);
 
-	var postsText = $('.post').find('span'); //ищем span
+	// var postsText = $('.post').find('span'); //ищем span
 	// console.log(postsText);
 	//переопределяем атрибут
 	// $(postsText).attr('data-number', 'ruihh'); //$('.post').find('span').attr('data-number', 'ruihh'); - тоже самое
 
-	// посмотреть как менять текст в зависимости от ширины экрана
-	$('.js-text-guitar').html('Начни играть, как Джими Хендрикс'); //заменяем текст внутри тега
-	$('.js-text-vocal').html('Пой, как Селин Дион и Эми Вайнхаус');
-	$('.js-text-fortepiano').html('Чувствуй клавиши, как Людовико Эйнауди');
+	var colWrapperAdd = false; //этой переменной будем проверять есть ли класс
+
+	$(window).on('resize', function() {
+		checkColAdd(); //вызываем функцию при любом ресайзе окна
+	});
+
+	checkColAdd(); //вызываем функцию при загрузке страницы
+
+	function checkColAdd() {
+		// проверяем с какого экрана смотрим 
+		var viewportWidth = $(window).innerWidth();
+		if ( viewportWidth > 1170 ) {
+			if( colWrapperAdd == false ) {
+				$('.all-courses-wrapper').wrapAll('<div class="col  col--lg-1">');
+				colWrapperAdd = true;
+			}
+		}
+		else{
+			if( colWrapperAdd = true ) {
+				$('.all-courses-wrapper').unwrap('<div class="col  col--lg-1">');
+				colWrapperAdd = false;
+			}
+		}
+	}
 
 	
 
@@ -53,14 +73,15 @@ $(document).ready(function(){
 
 	    };
 
+		document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
 
 		var toggler = document.getElementById('toggler');
 		toggler.addEventListener('click', mainNavVisibleToggle); //слушаем клик
 		function mainNavVisibleToggle(e) {
 		  e.preventDefault();
 		  toggler.classList.toggle('toggler--close');
-		  document.getElementById('main-nav__list').classList.toggle('main-nav__list--visible'); //переключили класс
-		}
+		  document.getElementById('main-nav').classList.toggle('main-nav--visible'); //переключили класс
+		};
 
 
 });
