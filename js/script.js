@@ -31,11 +31,13 @@ $(document).ready(function(){
 		}
 		else{
 			if( colWrapperAdd = true ) {
-				$('.all-courses-wrapper').unwrap('<div class="col  col--lg-1">');
+				$('.js-section-header_wrap').wrapAll('<div class="col col--lg-1">');
+				$('.all-courses-wrapper').unwrap('<div class="col  col--lg-1">'); //обертка для заголовка
+
 				colWrapperAdd = false;
 			}
 		}
-	}
+	};
 
 	
 
@@ -72,16 +74,6 @@ $(document).ready(function(){
 	        myMap.geoObjects.add(myPlacemark);
 
 	    };
-
-		document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
-
-		var toggler = document.getElementById('toggler');
-		toggler.addEventListener('click', mainNavVisibleToggle); //слушаем клик
-		function mainNavVisibleToggle(e) {
-		  e.preventDefault();
-		  toggler.classList.toggle('toggler--close');
-		  document.getElementById('main-nav').classList.toggle('main-nav--visible'); //переключили класс
-		};
 
 
 });
