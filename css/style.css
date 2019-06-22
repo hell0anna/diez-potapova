@@ -259,7 +259,7 @@ button {
 
 .main-nav__list {
 	padding-left: 0;
-	margin: 0 0 0 auto;
+	/*margin: 0 0 0 auto;*/
 }
 
 .main-nav__item {
@@ -554,7 +554,7 @@ button {
 
 @media (min-width: 600px) {
   .header-wrapper {
-		position: absolute;
+	position: absolute;
   }
 
   .main-nav {
@@ -569,13 +569,18 @@ button {
     display: flex;
     flex-wrap: wrap;
 	align-items: center;
+
+	margin: 0 0 0 auto;
   }
 
+
+
   .main-nav__link {
-		display: block;
-		padding: 25px 15px 15px 15px;
-		text-transform: uppercase;
-		color: #000;
+	display: block;
+	padding: 25px 15px 15px 15px;
+	text-transform: uppercase;
+	color: #000;
+	font-size: 16px;
   }
 }
 
@@ -915,7 +920,7 @@ button {
 /*------------------------------ КОНТАКТЫ -------------------------------*/
 
 	.contacts {
-		margin: 90px 0;
+		margin: 90px 0 70px 0;
 	}
 
 	.contacts .section-header {
@@ -931,6 +936,37 @@ button {
 	}
 
 
+/*------------------------------ ФУТЕР -------------------------------*/
+
+	.footer-wrapper {
+		display: block;
+		margin-bottom: 35px;
+	}
+
+	.social__list__wrapper {
+		display: flex;
+	}
+
+	.social__list {
+	    display: flex;
+	    margin-left: auto;
+	    list-style: none;
+	}
+
+	.social__item {
+		/*display: inline-block;*/
+	}
+
+	.social__link-active {
+		padding: 20px;
+		color: #000;
+		font-size: 12px;
+		text-decoration: none;
+	}
+
+	.social__link-active:last-child {
+		padding-right: 0;
+	}
 /*конец медиа*/
 }
 
