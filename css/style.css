@@ -525,6 +525,44 @@ button {
 }
 
 
+
+/* ============================== замена картинок на 320+ ============================== */
+@media (min-width: 321px) {
+	.vocal {
+		background: url(../img/courses-vocal-bg-1280.jpg) no-repeat center #021a23;
+		background-size: cover;
+	}
+
+	.guitar {
+		background: url(../img/courses-guitar-bg-1280.jpg) no-repeat center #021a23;
+		background-size: cover;
+	}
+
+	.fortepiano {
+		background: url(../img/courses-fortepiano-bg-1280.jpg) no-repeat center #021a23;
+		background-size: cover;
+
+	}
+	
+	.team {
+		background: url(../img/about-team-bg-1280.jpg) no-repeat center #021a23;
+		background-size: cover;
+	}
+
+	.results {
+		background: url(../img/about-results-1280.jpg) no-repeat center #021a23;
+		background-size: cover;
+	}
+
+	.studio {
+		background: url(../img/about-studio-1280.jpg) no-repeat center #021a23;
+		background-size: cover;
+	}
+}
+
+
+
+
 /* ============================== стили для lg 1280 ============================== */
 
 
