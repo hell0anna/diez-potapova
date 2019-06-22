@@ -61,6 +61,10 @@ body {
   color: #fff;
 }
 
+h1, h2 {
+	font-weight: 400;
+}
+
 button {
   padding: 0;
   border: none;
@@ -157,12 +161,13 @@ button {
 	font-family: "Prata", "Times", serif;
 	font-size: 30px;
 	color: #eec643;
+	text-decoration: none;
 }
 
 /*----------- бургер ---------*/
 
 @media (min-width: 600px) {
-  .page-header {
+  .header-wrapper {
     position: static;
     height: auto;
   }
@@ -228,71 +233,59 @@ button {
 .toggler--close > span:after {
   transform: rotate3d(0, 0, 1, -45deg);
 }
+
+/*---------- конец бургера ----------*/
+/*---------- выпадающее меню ----------*/
+
 .main-nav {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+  width: 100%;
   position: absolute;
+  padding: 0;
+  /*margin: 0;*/
+  margin-left: auto;
+  
   top: 0;
   right: 0;
   left: 0;
+  list-style: none;
+  background-color: #000;
+  
   display: none;
-  /*display: block;*/
-}
-.main-nav--visible {
-  display: block;
-  /*display: none;*/
 }
 
-@media (min-width: 600px) {
-  .main-nav__list {
-    position: static;
-    display: flex;
-    flex-wrap: wrap;
-  }
+.main-nav--visible {
+  display: block;
 }
+
 .main-nav__list {
 	padding-left: 0;
-	background-color: #000;
+	margin: 0 0 0 auto;
 }
 
 .main-nav__item {
   display: block;
-  width: 100%;
-}
-.main-nav__item:first-child a {
-  padding-right: 3em;
-}
-@media (min-width: 600px) {
-  .main-nav__item:first-child a {
-    padding-right: 1em;
-  }
-}
-.main-nav__item a {
-  display: block;
-  padding: 10px 10px;
-  /*height: 3em;*/
-  line-height: 3;
-  color: #fff;
-  font-weight: 700;
-  text-decoration: none;
-  /*margin-bottom: 1px;*/
+ 
 }
 
-/*---------- конец бургера ----------*/
+
+.main-nav__item:last-child .main-nav__link {
+	padding-right: 0;
+} 
+
+.main-nav__link {
+  display: block;
+  padding: 10px 10px;
+  color: #fff;
+  text-decoration: none;
+}
+
 
 
 /*-------- ПРОМО -------*/
 
 .promo__wrapper {
 	position: relative;
-
-	/*display: flex;
-  	flex-direction: column;
-  	justify-content: center;*/
-
 	min-width: 320px;
-	min-height: 536px;
 
 	/*background: url(../img/promo-bg-1280.jpg) no-repeat center #021a23;*/
 	background: linear-gradient(rgba(2, 26, 35, 0.35), rgba(2, 26, 35, 0.35)), url(../img/promo-bg.jpg) no-repeat center #021a23;
@@ -301,14 +294,11 @@ button {
 }
 
 .promo__wrapper .container {
-	/*display: flex;
-	flex-direction: column;
-  	justify-content: center;*/
 	min-height: 536px;	
 }
 
 .promo-header {
-	margin-bottom: 010px;
+	margin-bottom: 0 10px;
 	font-family: 'Prata', 'Times', serif;
 	font-size: 32px;
 	line-height: 42px;
@@ -318,14 +308,13 @@ button {
 }
 
 .promo-text__wrapper {
-	margin-top: 145px;
+	margin-top: 135px;
 	margin-bottom: 80px;
-
 }
 
 .promo-header__lead {
 	margin: 0;
-	width: 200px;
+	max-width: 200px;
 }
 
 .form-wrapper {
@@ -472,26 +461,24 @@ button {
 
 /*---------------------------------- ВИДЕО ----------------------------------*/
 
-.video {
+/*.video {
 	margin: 25px 0 30px 0;
 }
 
-.video-wrapper {
+.video-wrapper__big {
 	position: relative;
 	min-height: 144px;
 	padding: 30px 60px 30px 10px;
 	margin: 0 22px 15px 22px;
-
 	background-color: #021a23;
 }
 
-.video-wrapper:before {
+.video-wrapper__big:before {
 	content:'';
 	position: absolute;
 	width: 8px;
 	height: 16px;
 	vertical-align: middle;
-
 	right: 22px;
 
 	background-image: url(../img/arrow-video.svg);
@@ -500,7 +487,7 @@ button {
 .video-wrapper__hide {
 	display: none;
 }
-
+*/
 
 /*-------------------------------- КОНТАКТЫ --------------------------------*/
  
@@ -565,14 +552,48 @@ button {
 
 /* ============================== стили для lg 1280 ============================== */
 
+@media (min-width: 600px) {
+  .header-wrapper {
+		position: absolute;
+  }
 
+  .main-nav {
+  	background-color: transparent;
+  	position: static;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .main-nav__list {
+    position: static;
+    display: flex;
+    flex-wrap: wrap;
+	align-items: center;
+  }
+
+  .main-nav__link {
+		display: block;
+		padding: 25px 15px 15px 15px;
+		text-transform: uppercase;
+		color: #000;
+  }
+}
 
 
 
 @media (min-width: 1200px) {
 
+	body {
+	  margin: 0;
+	  font-family: "PT Sans", "Arial", sans-serif;
+	  font-size: 20px;
+	  line-height: 28px;
+	  box-sizing: border-box;
+	  color: #fff;
+	}
+
 	.container {
-	  max-width: 1170px;
+	  max-width: 1200px;
 	  margin: auto;
 	  padding: 0 15px;
 	/*  background-color: #ddd;*/
@@ -605,7 +626,7 @@ button {
 		padding-left: 100px;
 	}
 
-/*------------------------------ общие стили для 1200 -------------------------------*/
+/*---------- общие стили для 1200 -----------*/
 
 	.text__hide-320 {
 		display: inline;
@@ -617,56 +638,110 @@ button {
 
 	.section-header {
 		padding: 4px 10px 4px 0;
-		margin-bottom: 30px;	
+		margin: 0 0px 30px 0;
 		font-size: 50px;
 		line-height: 50px;
 		letter-spacing: 2px;
-		/*?????*/
-		font-style: normal;
-		font-weight: 400;
 	}
 
-/*------------------------------ ШАПОЧКА -------------------------------*/
-
-	.main-nav__list {
-		display: flex;
-		justify-content: flex-end;
-		padding: 0;
-		margin: 0;
-		list-style: none;
-	}
-
-	.main-nav__item {
-		
-	}
-
-	.main-nav__link {
+	.form-wrapper {
 		display: block;
-		padding: 10px;
-		text-transform: uppercase;
 	}
-
-	.main-nav__item:last-child .main-nav__link {
-		padding-right: 0;
-	} 
 
 
 /*------------------------------ ПРОМО -------------------------------*/
 	.promo__wrapper {
-		position: relative;
-
-		/*display: flex;
-	  	flex-direction: column;
-	  	justify-content: center;*/
-
-		min-height: 768px;
-
-		/*background: url(../img/promo-bg-1280.jpg) no-repeat center #021a23;*/
 		background: url(../img/promo-bg-1280.jpg) no-repeat center #021a23;
 		background-size: cover;
 	}
 
+	.promo__wrapper .container {
+		min-height: 768px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	.promo__wrapper .row {
+		align-items: center;
+	}
+
+	.promo-text__wrapper {
+		max-width: 770px;
+	}
+
+	.promo-header {
+		margin-bottom: 25px;
+		font-size: 55px;
+		line-height: 55px;
+	}
+
+	.promo-header__lead {
+		max-width: 470px;
+		font-size: 20px;
+		line-height: 28px;
+	}
+
+	.promo__button_320 {
+		display: none;
+	}
+
+	.button__form-unactive {
+		display: none;
+	}
+
+/*------ ФОРМА ------*/
+
+.form-wrapper {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: 0 30px;
+	height: 100%;
+	background-color: #fff;
+	border: 1px solid #eec643;
+}
+
+.button {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+.form-wrapper__brd-color {
+	border: 1px solid #000;
+}
+
+.button_color {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: #000;
+	color: #fff;
+}
+
+.form-lead {
+	color: #000;
+}
+
+.form-lead__header {
+	margin-bottom: 20px;
+	font-size: 30px;
+	line-height: 40px;
+}
+
+.form {
+	margin-bottom: 130px;
+}
+
 /*------------------------------ НАПРАВЛЕНИЯ -------------------------------*/
+
+	.courses {
+		margin: 90px 0;
+	}
 
 	.courses .row:first-child {
 		position: relative;
@@ -733,17 +808,127 @@ button {
 
 /*------------------------------ О ШКОЛЕ -------------------------------*/
 
-.about .container {
-	min-height: 568px;
+	.about {
+		margin: 90px 0;
+	}
+
+	.about .container {
+		min-height: 568px;
+		
+	}
+
+	.about .section-header {
+		padding-left: 15px;
+	}
+
+	.about-item__wrapper {
+		min-height: 568px;
+		padding: 20px 10px 30px 30px;
+		margin-bottom: 0;
+
+		font-size: 20px;
+		line-height: 28px;
+	}
+
+	.sub-header {
+		margin-bottom: 10px;
+	}
+
+	.studio  {
+		height: 100%;
+	}
+
+	.about .row:last-child {
+		height: 100%;
+	}
+
+
+
+/*------------------------------ ВИДЕО -------------------------------*/
+
+.video {
+	margin: 90px 0;
+
+	border: 1px solid #000;
+	color: #000;
+}
+
+.video-wrapper {
+	border: 1px solid #000;
+}
+
+.video-wrapper__big {
+	border: 1px solid #000;
+	width: 200px;
+	float: left;
+}
+
+.video-wrapper__small {
+	border: 1px solid #000;
+	width: 200px;
+}
+
+/*.video .container {
+	display: flex;
+	position: relative;
+}
+
+.video .section-header {
+	position: absolute;
+	left: 15px;
+	bottom: -60px;
+
+	transform: rotate(-90deg);
+	transform-origin: top left;
+}
+
+.video-wrapper__big {
+	float: left;
+	border: 1px solid #000;
+	background-color: red;
+	width: 200px;
+	padding: 30px 60px 30px 20px;
+	margin: 0 22px 15px 90px;
+	background-color: #021a23;
 	
+	height: 568px;
 }
 
-.about-item__wrapper {
-	min-height: 568px;
-	/*height: 100%;*/
-
-	padding: 30px 200px 30px 30px;
+.video-wrapper {
+	float: left;
+	width: 75%;
+	margin-left: 90px;
 }
+
+.video-wrapper__hide {
+	display: block;
+
+}
+
+.video-wrapper__small {
+	width: 25%;
+	height: 144px;
+	background-color: #021a23;
+	border: 1px solid #000;
+}*/
+
+/*------------------------------ КОНТАКТЫ -------------------------------*/
+
+	.contacts {
+		margin: 90px 0;
+	}
+
+	.contacts .section-header {
+		padding-left: 15px;
+	}
+
+	.map-wrapper {
+		height: 100%;
+	}
+
+	.adress-wrapper p{
+		padding-top: 10px;
+	}
 
 
 /*конец медиа*/

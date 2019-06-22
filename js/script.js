@@ -65,7 +65,7 @@ $(document).ready(function(){
 	            // Своё изображение иконки метки.
 	            iconImageHref: './img/icon-geotag.svg',
 	            // Размеры метки.
-	            iconImageSize: [17, 22],
+	            iconImageSize: [40, 50],
 	            // Смещение левого верхнего угла иконки относительно
 	            // её "ножки" (точки привязки).
 	            iconImageOffset: [0, -20]

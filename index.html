@@ -17,7 +17,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col col--lg-1">
-						<div class="logo-wrapper"><span class="diez-logo">Diez</span></div>
+						<div class="logo-wrapper" id="home"><a href="#promo" class="diez-logo">Diez</a></div>
 						
 						<!-- <img src="./images/diez-logo.png" class="logo" alt="Логотип Diez"> -->
 					</div>
@@ -27,16 +27,16 @@
 						<nav class="main-nav" id="main-nav">
 							<ul class="main-nav__list" id="main-nav__list">
 								<li class="main-nav__item">
-									<a href="#" class="main-nav__link">Направление</a>
+									<a href="#courses" class="main-nav__link">Направление</a>
 								</li>
 								<li class="main-nav__item">
-									<a href="#" class="main-nav__link">О школе</a>
+									<a href="#about" class="main-nav__link">О школе</a>
 								</li>
 								<li class="main-nav__item">
-									<a href="#" class="main-nav__link">Видео</a>
+									<a href="#video" class="main-nav__link">Видео</a>
 								</li>
 								<li class="main-nav__item">
-									<a href="#" class="main-nav__link">Контакты</a>
+									<a href="#contacts" class="main-nav__link">Контакты</a>
 								</li>
 							</ul>
 						</nav>
@@ -48,12 +48,12 @@
 		<!-- ПРОМО-БЛОК -->
 
 		<main>
-			<section class="promo__wrapper">
+			<section class="promo__wrapper" id="promo">
 				<div class="container">
 					<div class="row">
 						<div class="col  col--lg-3"> 
 							<div class="promo-text__wrapper">
-								<h1 class="promo-header">Школа музыкального искусства</h1>
+								<h1 class="promo-header"><span class="text__hide-320">Diez — ш</span><span class="text__show-320">Ш</span>кола музыкального искусства</h1>
 								<p class="promo-header__lead">Научим петь, играть на инструментах, не бояться сцены и получать удовольствие от музыки</p>	
 							</div>
 						</div>
@@ -61,7 +61,7 @@
 							<div class="promo__button_320">
 								<button type="submit" class="button button_active">Вводный урок</button>
 							</div>
-							<div class="form-wrapper">
+							<div class="form-wrapper form-wrapper__brd-color">
 								<div class="form-lead">
 									<h3 class="form-lead__header">Вводный урок</h3>
 									<p>Попробуй любые направления  бесплатно</p>
@@ -76,7 +76,7 @@
 									<label for="course">Направление</label>
 									<input id="course" type="text" placeholder="Направление" title="Выберете направление" class="form-input__course">
 					
-									<button type="submit" class="button button_active">Записаться</button>
+									<button type="submit" class="button button_color">Записаться</button>
 								</form>
 							</div>
 						</div>
@@ -86,7 +86,7 @@
 
 			<!-- НАПРАВЛЕНИЯ -->
 
-			<section class="courses">
+			<section class="courses" id="courses">
 				<div class="container">
 					<div class="row">
 						<!-- убран класс js-section-header -->
@@ -127,7 +127,7 @@
 
 			<!-- О ШКОЛЕ -->
 
-			<section class="about">
+			<section class="about" id="about">
 				<div class="container">
 					<!-- <h2 class="section-header">Задаем темп</h2> -->
 					<div class="row">
@@ -163,97 +163,67 @@
 									<div class="button__form-unactive">
 										<a href="#" class="link-active">Вводный урок</a>
 									</div>
+									
+									<div class="form-wrapper">
+										<div class="form-lead">
+											<h3 class="form-lead__header">Вводный урок</h3>
+											<p>Попробуй любые направления  бесплатно</p>
+										</div>
+										<form action="#" class="form">
+											<label for="name">Имя</label>
+											<input id="name" type="text" placeholder="Имя" title="Укажите имя" required class="form-input__name">
+
+											<label for="tel">Телефон</label>
+											<input id="tel" type="tel" placeholder="Телефон" title="Укажите телефон" required class="form-input__tel">
+										<!-- тут должен быть выпадающий список -->
+											<label for="course">Направление</label>
+											<input id="course" type="text" placeholder="Направление" title="Выберете направление" class="form-input__course">
+											<button type="submit" class="button button_active">Записаться</button>
+										</form>
+									</div>
 								</div>
-							</div>
-						</div>
-
-
-						
-						<div class="col  col--lg-1">
-							<div class="about-item__wrapper form-wrapper">
-								<div class="form-lead">
-									<h3 class="form-lead__header">Вводный урок</h3>
-									<p>Попробуй любые направления  бесплатно</p>
-								</div>
-								<form action="#" class="form">
-									<label for="name">Имя</label>
-									<input id="name" type="text" placeholder="Имя" title="Укажите имя" required class="form-input__name">
-
-									<label for="tel">Телефон</label>
-									<input id="tel" type="tel" placeholder="Телефон" title="Укажите телефон" required class="form-input__tel">
-								<!-- тут должен быть выпадающий список -->
-									<label for="course">Направление</label>
-									<input id="course" type="text" placeholder="Направление" title="Выберете направление" class="form-input__course">
-					
-									<button type="submit" class="button button_active">Записаться</button>
-								</form>
 							</div>
 						</div>	
 					</div>
 				</div>
-				
 			</section>
 
 			<!-- ВИДЕО -->
 
-			<section class="video">
+			<section class="video" id="video">
 				<div class="container">
-					<div class="row">
-						<div class="col  col--lg-3"> 
-							<div class="row">
-								<!-- <h2 class="section-header">В стенах школы</h2> -->
-
-								<!-- !!!!! переверстать без оберток по колонкам !!! display:float на десктопе -->
-								<!-- большое видео -->
-								<div class="col  col--lg-4 col--lg-pl">
-									<h2 class="section-header">В стенах школы</h2>
-									<div class="video-wrapper video-wrapper__big ">
-										<!-- ///////// -->
-										<h3 class="sub-header">Зимняя вишня</h3>
-										<p class="text">Заключительный зимний концерт 2017 года выступало 97 учеников</p>
-									</div>
-								</div>
-							</div>
+					<h2 class="section-header">В стенах школы</h2>
+					<div class="video-wrapper">
+						<div class="video-wrapper__big">
+							<h3 class="sub-header">Зимняя вишня</h3>
+							<p class="text">Заключительный зимний концерт 2017 года выступало 97 учеников</p>
 						</div>
-						<!-- маленькие видео -->
-						<div class="col col--lg-1">
-							<div class="row">
-								<div class="col  col--lg-4">
-									<div class="video-wrapper video-wrapper__hide">
-										<!-- /////// -->
-										<h4 class="video-prev__header">Янг Чжо</h4>
-										<p class="text__font-size">Репетиция сольной партии скрипки</p>
-									</div>
-								</div>
-								<div class="col  col--lg-4">
-									<div class="video-wrapper video-wrapper__hide">
-										<!-- /////// -->
-										<h4 class="video-prev__header">Летний штиль</h4>
-										<p class="text__font-size">За кулисами концерта</p>
-									</div>
-								</div>
-								<div class="col  col--lg-4">
-									<div class="video-wrapper video-wrapper__hide">
-										<!-- /////// -->
-										<h4 class="video-prev__header">Сергей Трофимов</h4>
-										<p class="text__font-size">ЛЮБЭ — Выйду в поле с конем</p>
-									</div>
-								</div>	
-							</div>
-						</div>					
+						
+						<div class="video-wrapper__small video-wrapper__hide">
+							<h4 class="video-prev__header">Янг Чжо</h4>
+							<p class="text__font-size">Репетиция сольной партии скрипки</p>
+						</div>
+						<div class="video-wrapper__small video-wrapper__hide">
+							<h4 class="video-prev__header">Летний штиль</h4>
+							<p class="text__font-size">За кулисами концерта</p>
+						</div>
+					
+						<div class="video-wrapper__small video-wrapper__hide">
+							<h4 class="video-prev__header">Сергей Трофимов</h4>
+							<p class="text__font-size">ЛЮБЭ — Выйду в поле с конем</p>
+						</div>
 					</div>
-				</div>
-				
+				</div>				
 			</section>
 
 			<!-- КОНТАКТЫ -->
 
-			<section class="contacts">
+			<section class="contacts" id="contacts">
 				<div class="container">
 					<div class="row">
-						<div class="col  col--lg-3"> 
-							<div class="row">
-								<div class="col  col--lg-3">
+						<!-- <div class="col  col--lg-3"> 
+							<div class="row"> -->
+								<div class="col  col--lg-2">
 									<h2 class="section-header">Ждем тебя</h2>
 								</div>
 								<div class="col  col--lg-1">
@@ -262,14 +232,14 @@
 										СПБ, 6-я Линия ВО, 42</p>
 									</div>
 								</div>
-								<div class="col  col--lg-4">
+								<div class="col  col--lg-3">
 									<div id="map" class="map-wrapper js-map">
 										<!-- map script -->
 										<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
 									</div>
 								</div>
-							</div>
-						</div>
+							<!-- </div>
+						</div> -->
 						<!-- форма -->
 						<div class="col  col--lg-1">
 							<div class="form-wrapper">
