@@ -40,6 +40,38 @@ $(document).ready(function(){
 		}
 	};
 
+
+	var slickOn = false; //этой переменной будем проверять включен ли слацдер / делаем изначально выключенным при загрузке страницы
+
+	$(window).on('resize', function() {
+		checkCarouselOn(); //вызываем функцию при любом ресайзе окна
+	});
+
+	checkCarouselOn(); //вызываем функцию при загрузке страницы
+
+	function checkCarouselOn() {
+		// проверяем с какого экрана смотрим и включаем или нет карусель
+		var viewportWidth = $(window).innerWidth();
+		if ( viewportWidth < 600 ) {
+			if( slickOn == false ) {
+				$('.carousel').slick();
+				slickOn = true;
+			}
+			// просто подсключили карусель
+			// $('.carousel').slick();
+			// console.log('mobile. carousel on');
+		}
+		else{
+			if( slickOn = true ) {
+				$('.carousel').slick('unslick');
+				slickOn = false;
+			}
+			// $('.carousel').slick('unslick'); //выключаем слайдер
+			// console.log('desktop. carousel off');
+		}
+		// console.log(viewportWidth);
+	}
+
 	
 
 	ymaps.ready(init);
