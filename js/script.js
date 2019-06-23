@@ -26,13 +26,14 @@ $(document).ready(function(){
 		if ( viewportWidth > 1170 ) {
 			if( colWrapperAdd == false ) {
 				$('.all-courses-wrapper').wrapAll('<div class="col  col--lg-1">');
+				// $('.button-active__rotate').unwrap('<div class="col  col--lg-2">');
 				colWrapperAdd = true;
 			}
 		}
 		else{
 			if( colWrapperAdd = true ) {
 				$('.js-section-header_wrap').wrapAll('<div class="col col--lg-1">');
-				$('.all-courses-wrapper').unwrap('<div class="col  col--lg-1">'); //обертка для заголовка
+				// $('.button-active__rotate').wrapAll('<div class="col  col--lg-2">'); //обертка для заголовка
 
 				colWrapperAdd = false;
 			}

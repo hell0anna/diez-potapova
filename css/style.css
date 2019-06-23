@@ -98,7 +98,7 @@ button {
 }
 
 .col--sm-pr {
-	padding-right: 76px;
+	padding-right: 90px;
 }
 
 /*----------------------------------------------------------*/
@@ -408,6 +408,28 @@ button {
 
 	text-decoration: none;
 	text-transform: uppercase;
+}
+
+.button-active {
+	display: block;
+    padding: 25px 20px;
+    margin: 0 auto;
+    background-color: #eec643;
+    color: #fff;
+    text-align: center;
+}
+
+.button-active__rotate {
+	position: absolute;
+    right: -27px;
+    top: -117px;
+    height: 60px;
+    width: 144px;
+    padding: 10px 20px;
+    text-align: left;
+    /* vertical-align: middle; */
+    transform: rotate(-90deg);
+    transform-origin: center center
 }
 
 
