@@ -41,6 +41,8 @@ $(document).ready(function(){
 	// 	}
 	// };
 
+	$('.form-select').selectric();
+
 
 	ymaps.ready(init);
     function init(){ 
@@ -76,7 +78,7 @@ $(document).ready(function(){
 
     };
 
-	    
+
 
 
 	var slickOn = false; //этой переменной будем проверять включен ли слацдер / делаем изначально выключенным при загрузке страницы

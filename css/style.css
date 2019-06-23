@@ -624,7 +624,7 @@ body { overflow: -moz-scrollbars-none; }
 
 
 /* ============================== замена картинок на 320+ ============================== */
-@media (min-width: 321px) {
+@media (min-width: 400px) {
 	.vocal {
 		background: url(../img/courses-vocal-bg-1280.jpg) no-repeat center #021a23;
 		background-size: cover;
@@ -761,9 +761,6 @@ body { overflow: -moz-scrollbars-none; }
 		letter-spacing: 2px;
 	}
 
-	.form-wrapper {
-		display: block;
-	}
 
 
 /*------------------------------ ПРОМО -------------------------------*/
@@ -853,6 +850,30 @@ body { overflow: -moz-scrollbars-none; }
 .form {
 	margin-bottom: 130px;
 }
+
+.form-input {
+	min-height: 40px;
+    padding: 0;
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+
+    font-family: "PT Sans", "Arial", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    outline: none;
+
+    border: none;
+    border-bottom: 1px solid #eec643;
+    background-color: transparent;
+    transition: border 0.2s ease;
+}
+
+.form-input:hover {
+	border-bottom: 1px solid #d8aa13;
+}
+
 
 /*------------------------------ НАПРАВЛЕНИЯ -------------------------------*/
 
@@ -1066,6 +1087,7 @@ body { overflow: -moz-scrollbars-none; }
 
 	.map-wrapper {
 		height: 100%;
+		margin-bottom: 0;
 	}
 
 	.adress-wrapper p{
