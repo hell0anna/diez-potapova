@@ -75,6 +75,16 @@ button {
   cursor: pointer;
 }
 
+/* хром, сафари */
+body::-webkit-scrollbar { width: 0; }
+
+/* ie 10+ */
+body { -ms-overflow-style: none; }
+
+/* фф */
+body { overflow: -moz-scrollbars-none; }
+
+
 /*--------------------------- общие стили для 320px --------------------------*/
 
 .logo-wrapper {
@@ -286,8 +296,7 @@ button {
 .promo__wrapper {
 	position: relative;
 	min-width: 320px;
-
-	/*background: url(../img/promo-bg-1280.jpg) no-repeat center #021a23;*/
+	margin-bottom: 15px;
 	background: linear-gradient(rgba(2, 26, 35, 0.35), rgba(2, 26, 35, 0.35)), url(../img/promo-bg.jpg) no-repeat center #021a23;
 	background-size: cover;
 
@@ -302,9 +311,6 @@ button {
 	font-family: 'Prata', 'Times', serif;
 	font-size: 32px;
 	line-height: 42px;
-	/*????*/
-	font-style: normal;
-	font-weight: 400;
 }
 
 .promo-text__wrapper {
@@ -335,7 +341,11 @@ button {
 /*------------------------------ НАПРАВЛЕНИЯ -------------------------------*/
 
 .courses {
-	margin: 25px 0 30px 0;
+	margin: 15px 0 15px 0;
+}
+
+.courses .section-header {
+	margin-left: 15px;
 }
 
 .cource-wrapper {
@@ -436,7 +446,7 @@ button {
 /*-------------------------------- О ШКОЛЕ -------------------------------------*/
 
 .about {
-	margin: 25px 0 30px 0;
+	margin: 15px 0 15px 0;
 }
 
 .about-item__wrapper {
@@ -484,51 +494,91 @@ button {
 /*---------------------------------- ВИДЕО ----------------------------------*/
 
 .video {
+	margin: 15px 0 30px 0;
 	color: #000;
 }
 
 .video-wrapper {
-	/*height: 186px;*/
-	border: 1px solid #000;
-}
-
-.video-wrapper__big {
-	border: 1px solid #000;
-	/*float: left;*/
-}
-
-.video-wrapper__small {
-	border: 1px solid #000;
-}
-
-
-/*.video {
-	margin: 25px 0 30px 0;
+	width: 240px;
+	height: 169px;
+	margin: auto;
+	position: relative;
 }
 
 .video-wrapper__big {
 	position: relative;
-	min-height: 144px;
-	padding: 30px 60px 30px 10px;
-	margin: 0 22px 15px 22px;
-	background-color: #021a23;
+	height: 169px;
+	vertical-align: bottom;
+	background: url(../img/video-big-prev.jpg) no-repeat center #021a23;
+	background-size: cover;
 }
 
-.video-wrapper__big:before {
-	content:'';
+.video-wrapper__small {
+	position: relative;
+	width: 100%;
+	height: 169px;
+}
+
+.small-video-img {
 	position: absolute;
+	left: 0;
+	top: 0;
+	width: auto;
+	height: 100%;
+}
+
+.slick-next {
+	position: absolute;
+	top: 45%;
+	bottom: 0;
+	right: -20px;
 	width: 8px;
 	height: 16px;
-	vertical-align: middle;
-	right: 22px;
-
-	background-image: url(../img/arrow-video.svg);
+	background: url(../img/arrow-video.svg);
 }
 
-.video-wrapper__hide {
-	display: none;
+.slick-prev {
+	position: absolute;
+	top: 45%;
+	bottom: 0;
+	left: -20px;
+	width: 8px;
+	height: 16px;
+	background: url(../img/arrow-video-prev.svg);
 }
-*/
+
+.video-text__wrapper, .video-text__wrapper-small {
+	position: absolute;
+	bottom: 15px;
+	left: 10px;
+	/*margin: auto auto 15px 10px;*/
+	color: #fff;
+}
+.video .sub-header {
+	margin-bottom: 0;
+}
+
+.video-prev__header {
+	margin-bottom: 0;
+}
+
+.video p {
+	margin: 0;
+}
+
+.play-button__button {
+	position: absolute;
+	bottom: 0;
+	top: 0;
+	right: 45%;
+}
+
+.play-button__img {
+	width: 28px;
+	height: 35px;
+}
+
+
 
 /*-------------------------------- КОНТАКТЫ --------------------------------*/
  
@@ -637,6 +687,8 @@ button {
 	  line-height: 28px;
 	  box-sizing: border-box;
 	  color: #fff;
+
+	  /*overflow: visible;*/
 	}
 
 	.container {
@@ -822,7 +874,7 @@ button {
 		display: block;
 		padding-right: 60px;
 
-		background-image: url(../img/courses-lections-bg.jpg);
+		background: url(../img/courses-lections-bg.jpg) no-repeat center #021a23;
 		background-size: cover;
 	}
 
@@ -909,8 +961,8 @@ button {
 
 	.video-wrapper {
 		margin-left: 100px;
+		width: 100%;
 		height: 568px;
-		border: 1px solid #000;
 	}
 
 	.video-wrapper__big {
@@ -919,17 +971,23 @@ button {
 		height: 100%;
 		margin-right: 30px;
 
-		border: 1px solid #000;
 	}
 
 	.video-wrapper__small {
+		position: relative;
 		float: left;
 		margin-bottom: 30px;
 		width: 25%;
-		min-height: 169px;
-
-		border: 1px solid #000;
 	}
+
+	.small-video-img {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: auto;
+		height: 100%;
+	}
+
 
 	.video .section-header {
 		position: absolute;
@@ -940,49 +998,35 @@ button {
 		transform-origin: top left;
 	}
 
-/*.video .container {
-	display: flex;
-	position: relative;
-}
+	.video-text__wrapper {
+		position: static;
+		margin: 20px auto auto 30px;
+		width: 240px;
+		color: #fff;
+		/*z-index: 1;*/
+	}
 
-.video .section-header {
-	position: absolute;
-	left: 15px;
-	bottom: -60px;
+	.video-text__wrapper-small {
+		position: absolute;
+		bottom: 10px;
+		font-size: 14px;
+		color: #fff;
+	}
 
-	transform: rotate(-90deg);
-	transform-origin: top left;
-}
+	.video-prev__header {
+		margin-bottom: 20px;
+	}
 
-.video-wrapper__big {
-	float: left;
-	border: 1px solid #000;
-	background-color: red;
-	width: 200px;
-	padding: 30px 60px 30px 20px;
-	margin: 0 22px 15px 90px;
-	background-color: #021a23;
+	.video-text__wrapper-small .video-prev__header {
+		margin: 0;
+	}
+
 	
-	height: 568px;
-}
+	.play-button__img-big {
+		width: 40px;
+		height: 50px;
+	}
 
-.video-wrapper {
-	float: left;
-	width: 75%;
-	margin-left: 90px;
-}
-
-.video-wrapper__hide {
-	display: block;
-
-}
-
-.video-wrapper__small {
-	width: 25%;
-	height: 144px;
-	background-color: #021a23;
-	border: 1px solid #000;
-}*/
 
 /*------------------------------ КОНТАКТЫ -------------------------------*/
 
