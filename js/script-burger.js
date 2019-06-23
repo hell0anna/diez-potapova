@@ -9,7 +9,7 @@ document.documentElement.className = document.documentElement.className.replace(
 		  toggler.classList.toggle('toggler--close');
 		  document.getElementById('main-nav').classList.toggle('main-nav--visible'); //переключили класс
 
-		  // document.getElementById('.header-wrapper').classList.toggle('.header-wrapper_color');
+		  // document.getElementById('header-wrapper').classList.toggle('header-wrapper_color');
 		};
 
 });

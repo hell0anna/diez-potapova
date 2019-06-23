@@ -154,18 +154,18 @@ body { overflow: -moz-scrollbars-none; }
 }
 
 .header-wrapper {
-  /*background-color: #000;*/
 	position: fixed;
 	top: 0;
 	right: 0;
 	left: 0;
-	height: 60px;
+	height: 65px;
 	z-index: 1;
+  	background-color: rgba(0, 0, 0, 0.9);
 }
 
-.header-wrapper_color {
-	background-color: #000;
-}
+/*.header-wrapper_color {
+	background-color: rgba(0, 0, 0, 0.9);
+}*/
 
 .diez-logo {
 	font-family: "Prata", "Times", serif;
@@ -180,6 +180,8 @@ body { overflow: -moz-scrollbars-none; }
   .header-wrapper {
     position: static;
     height: auto;
+
+    background-color: transparent;
   }
 }
 .toggler {
@@ -251,20 +253,21 @@ body { overflow: -moz-scrollbars-none; }
   width: 100%;
   position: absolute;
   padding: 0;
-  /*margin: 0;*/
+  /*margin-top: 9px;*/
   margin-left: auto;
   
   top: 0;
   right: 0;
   left: 0;
   list-style: none;
-  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.9);
   
   display: none;
 }
 
 .main-nav--visible {
   display: block;
+  margin-top: 10px;
 }
 
 .main-nav__list {
@@ -401,16 +404,31 @@ body { overflow: -moz-scrollbars-none; }
 	display: none;
 }
 
-.all-courses-wrapper {
-	min-width: 144px;
-	height: 60px;
+.all-courses__button {
+	position: absolute;
+    right: 15px;
+    top: -60px;
+    height: 60px;
+    width: 144px;
 
-	padding: 15px;
-	background-color: #eec643;
+    padding: 10px 20px;
+    margin: 0 auto;
+    background-color: #eec643;
 
-	transform: rotate(-90deg);
-	transform-origin: center center;
+    color: #fff;
+	font-weight: normal;
+    text-align: left;
+	text-decoration: none;
+	text-transform: uppercase;
+
+    transform: rotate(-90deg);
+    transform-origin: bottom right;
 }
+
+.courses-link-active {
+	color: #000;
+}
+
 
 .link-active {
 	color: #fff;
@@ -439,7 +457,7 @@ body { overflow: -moz-scrollbars-none; }
     text-align: left;
     /* vertical-align: middle; */
     transform: rotate(-90deg);
-    transform-origin: center center
+    transform-origin: center center;
 }
 
 
@@ -882,19 +900,6 @@ body { overflow: -moz-scrollbars-none; }
 		padding-right: 15px;
 	}
 
-	.all-courses-wrapper {
-		position: static;
-		right: 0;
-		top: 0;
-		bottom: 0;
-		height: 60px;
-
-		padding: 15px 60px 15px 15px;
-		background-color: #eec643;
-
-		transform: rotate(0deg);
-	}
-
 	.link-active {
 		color: #fff;
 		
@@ -903,6 +908,27 @@ body { overflow: -moz-scrollbars-none; }
 		font-weight: 700;
 		text-decoration: none;
 		text-transform: none;
+	}
+
+	.all-courses__button {
+		display: inline-block;
+		position: static;
+		padding: 20px 30px;
+		min-height: 270px;
+		width: 100%;
+
+		font-weight: bold;
+		font-size: 30px;
+	    text-align: left;
+		text-decoration: none;
+		text-transform: none;
+
+	    transform: rotate(0deg);
+	    transform-origin: bottom right;
+	}
+
+	.courses-link-active {
+		color: #fff;
 	}
 
 /*------------------------------ О ШКОЛЕ -------------------------------*/
