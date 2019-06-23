@@ -125,7 +125,7 @@ body { overflow: -moz-scrollbars-none; }
 
 .section-header {
 	margin: 0 60px 12px 0;
-	padding: 4px 10px 4px 10px;
+	padding: 4px 60px 4px 10px;
 	border-top: 1px solid #eec643;
 	border-bottom: 1px solid #eec643;
 
@@ -383,8 +383,11 @@ body { overflow: -moz-scrollbars-none; }
 }
 
 .fortepiano {
-	min-width: 212px;
-	padding-right: 30px;
+	/*min-width: 212px;*/
+	/*padding-right: 30px;*/
+	min-height: 144px;
+    padding: 30px 60px 30px 10px;
+    margin-bottom: 15px;
 	background: url(../img/courses-fortepiano-bg.jpg) no-repeat center #021a23;
 	background-size: cover;
 
@@ -392,8 +395,8 @@ body { overflow: -moz-scrollbars-none; }
 
 .right-col-wrapper {
 	/*position: relative;*/
-	display: flex;
-	justify-content: space-between;
+	/*display: flex;
+	justify-content: space-between;*/
 }
 
 .right-col-wrapper .col:nth-child(2) {
@@ -407,7 +410,7 @@ body { overflow: -moz-scrollbars-none; }
 .all-courses__button {
 	position: absolute;
     right: 15px;
-    top: -60px;
+    top: -220px;
     height: 60px;
     width: 144px;
 
@@ -744,7 +747,7 @@ body { overflow: -moz-scrollbars-none; }
 
 
 	.col--lg-pl {
-		padding-left: 100px;
+		padding-left: 105px;
 	}
 
 /*---------- общие стили для 1200 -----------*/
@@ -759,7 +762,7 @@ body { overflow: -moz-scrollbars-none; }
 
 	.section-header {
 		padding: 4px 10px 4px 0;
-		margin: 0 0px 30px 0;
+		margin: 0 0px 25px 0;
 		font-size: 50px;
 		line-height: 50px;
 		letter-spacing: 2px;
@@ -771,6 +774,7 @@ body { overflow: -moz-scrollbars-none; }
 	.promo__wrapper {
 		background: url(../img/promo-bg-1280.jpg) no-repeat center #021a23;
 		background-size: cover;
+		margin-bottom: 90px;
 	}
 
 	.promo__wrapper .container {
@@ -882,7 +886,7 @@ body { overflow: -moz-scrollbars-none; }
 /*------------------------------ НАПРАВЛЕНИЯ -------------------------------*/
 
 	.courses {
-		margin: 90px 0;
+		margin: 60px 0;
 	}
 
 	.courses .row:first-child {
@@ -891,7 +895,7 @@ body { overflow: -moz-scrollbars-none; }
 
 	.courses .section-header {
 		position: absolute;
-		left: 15px;
+		left: 0;
 		bottom: -60px;
 
 		transform: rotate(-90deg);
@@ -909,9 +913,34 @@ body { overflow: -moz-scrollbars-none; }
 		line-height: 40px;
 	}
 
+	.right-col-wrapper {
+		display: flex;
+	}
+
 	.right-col-wrapper .col:nth-child(2) {
 		display: block;
 	}
+
+	/*.col--lg-2:first-child {
+		order: 2;
+	}*/
+
+	.col--lg-2:nth-child(2) {
+		order: 1;
+	}
+
+	.right-col-wrapper {
+		order: 3;
+	}
+
+	.col--lg-1:first-child {
+		order: 4;
+	}
+
+	.col--lg-1:last-child {
+		order: 5;
+	}
+
 
 	.lections {
 		display: block;
@@ -919,7 +948,12 @@ body { overflow: -moz-scrollbars-none; }
 
 		background: url(../img/courses-lections-bg.jpg) no-repeat center #021a23;
 		background-size: cover;
+		/*order: 4;*/
 	}
+
+	/*.all-courses__button {
+		order: 5;
+	}*/
 
 	.col--sm-pr {
 		padding-right: 15px;
@@ -959,11 +993,11 @@ body { overflow: -moz-scrollbars-none; }
 /*------------------------------ О ШКОЛЕ -------------------------------*/
 
 	.about {
-		margin: 90px 0;
+		margin: 60px 0 90px 0;
 	}
 
 	.about .container {
-		min-height: 568px;
+		height: 568px;
 		
 	}
 
@@ -972,7 +1006,7 @@ body { overflow: -moz-scrollbars-none; }
 	}
 
 	.about-item__wrapper {
-		min-height: 568px;
+		min-height: 468px;
 		padding: 20px 10px 30px 30px;
 		margin-bottom: 0;
 
@@ -1043,7 +1077,8 @@ body { overflow: -moz-scrollbars-none; }
 	.video .section-header {
 		position: absolute;
 		left: 15px;
-		bottom: -90px;
+		bottom: -85px;
+		width: 568px;
 
 		transform: rotate(-90deg);
 		transform-origin: top left;
