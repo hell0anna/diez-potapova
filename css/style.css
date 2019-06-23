@@ -599,6 +599,10 @@ body { overflow: -moz-scrollbars-none; }
 
 
 /*-------------------------------- КОНТАКТЫ --------------------------------*/
+
+.contacts {
+	margin: 15px 0 15px 0;
+}
  
 .text__color {
 	color: #021a23;
