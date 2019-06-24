@@ -1,49 +1,6 @@
 $(document).ready(function(){
 
 
-// document.onscroll = function(){
-//   var what = document.querySelector("courses").getBoundingClientRect().top;
-//   document.getElementById('header-wrapper').classList.toggle(
-//     "header-wrapper__color", what <= window.innerHeight
-//    );
-// }
-
-
-
-
-
-
-	// var colWrapperAdd = false; //этой переменной будем проверять есть ли класс
-
-	// $(window).on('resize', function() {
-	// 	checkColAdd(); //вызываем функцию при любом ресайзе окна
-	// });
-
-	// checkColAdd(); //вызываем функцию при загрузке страницы
-
-	// function checkColAdd() {
-	// 	// проверяем с какого экрана смотрим 
-	// 	var viewportWidth = $(window).innerWidth();
-	// 	if ( viewportWidth > 1170 ) {
-	// 		if( colWrapperAdd == false ) {
-	// 			$('.all-courses-wrapper').wrapAll('<div class="col  col--lg-1">');
-	// 			// $('.button-active__rotate').unwrap('<div class="col  col--lg-2">');
-	// 			colWrapperAdd = true;
-	// 		}
-	// 	}
-	// 	else{
-	// 		if( colWrapperAdd = true ) {
-	// 			$('.js-section-header_wrap').wrapAll('<div class="col col--lg-1">');
-	// 			// $('.button-active__rotate').wrapAll('<div class="col  col--lg-2">'); //обертка для заголовка
-
-	// 			colWrapperAdd = false;
-	// 		}
-	// 	}
-	// };
-
-	$('.form-select').selectric();
-
-
 	ymaps.ready(init);
     function init(){ 
         // Создание карты.    

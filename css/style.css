@@ -124,10 +124,10 @@ body { overflow: -moz-scrollbars-none; }
 }
 
 .section-header {
-	margin: 0 60px 12px 0;
-	padding: 4px 60px 4px 10px;
-	border-top: 1px solid #eec643;
-	border-bottom: 1px solid #eec643;
+	margin: 0 60px 15px 0;
+	padding: 4px 20px 4px 10px;
+	border-top: 2px solid #eec643;
+	border-bottom: 2px solid #eec643;
 
 	font-family: 'Prata', 'Times', serif;
 	font-size: 30px;
@@ -334,11 +334,13 @@ body { overflow: -moz-scrollbars-none; }
 	width: 100%;
 	flex-grow: 1;
 
-	height: 60px;
+	height: 70px;
 
 	text-transform: uppercase;
 	background-color: #eec643;
 }
+
+
 
 
 /*------------------------------ НАПРАВЛЕНИЯ -------------------------------*/
@@ -386,7 +388,7 @@ body { overflow: -moz-scrollbars-none; }
 	/*min-width: 212px;*/
 	/*padding-right: 30px;*/
 	min-height: 144px;
-    padding: 30px 60px 30px 10px;
+    padding: 30px 40px 30px 10px;
     margin-bottom: 15px;
 	background: url(../img/courses-fortepiano-bg.jpg) no-repeat center #021a23;
 	background-size: cover;
@@ -443,7 +445,7 @@ body { overflow: -moz-scrollbars-none; }
 
 .button-active {
 	display: block;
-    padding: 25px 20px;
+    padding: 20px 20px;
     margin: 0 auto;
     background-color: #eec643;
     color: #fff;
@@ -581,6 +583,7 @@ body { overflow: -moz-scrollbars-none; }
 
 .video-prev__header {
 	margin-bottom: 0;
+	font-size: 16px;
 }
 
 .video p {
@@ -604,7 +607,7 @@ body { overflow: -moz-scrollbars-none; }
 /*-------------------------------- КОНТАКТЫ --------------------------------*/
 
 .contacts {
-	margin: 15px 0 15px 0;
+	margin: 15px 0 30px 0;
 }
  
 .text__color {
@@ -619,6 +622,10 @@ body { overflow: -moz-scrollbars-none; }
 	margin-bottom: 15px;
 	width: 100%;
 	height: 215px;
+}
+
+.adress-wrapper p{
+	margin-top: 10px;
 }
 
 
@@ -747,7 +754,7 @@ body { overflow: -moz-scrollbars-none; }
 
 
 	.col--lg-pl {
-		padding-left: 105px;
+		padding-left: 110px;
 	}
 
 /*---------- общие стили для 1200 -----------*/
@@ -761,8 +768,8 @@ body { overflow: -moz-scrollbars-none; }
 	}
 
 	.section-header {
-		padding: 4px 10px 4px 0;
-		margin: 0 0px 25px 0;
+		padding: 9px 10px 9px 0;
+		margin: 0 0px 15px 0;
 		font-size: 50px;
 		line-height: 50px;
 		letter-spacing: 2px;
@@ -814,73 +821,136 @@ body { overflow: -moz-scrollbars-none; }
 
 /*------ ФОРМА ------*/
 
-.form-wrapper {
-	position: relative;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	padding: 0 30px;
-	height: 100%;
-	background-color: #fff;
-	border: 1px solid #eec643;
-}
+	.form-wrapper {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		padding: 0 25px;
+		height: 100%;
+		background-color: rgba(255, 255, 255, 0.9);
+		border: 2px solid #eec643;
+	}
 
-.button {
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	right: 0;
-}
+	.button {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+	}
 
-.form-wrapper__brd-color {
-	border: 1px solid #000;
-}
+	.form-wrapper__brd-color {
+		border: 2px solid #000;
+	}
 
-.button_color {
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	background-color: #000;
-	color: #fff;
-}
+	.button_color {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background-color: #000;
+		color: #fff;
+	}
 
-.form-lead {
-	color: #000;
-}
+	.form-lead {
+		color: #000;
+	}
 
-.form-lead__header {
-	margin-bottom: 20px;
-	font-size: 30px;
-	line-height: 40px;
-}
+	.form-lead__header {
+		margin-bottom: 0;
+		margin-top: 20px;
+		font-size: 30px;
+		line-height: 40px;
+	}
 
-.form {
-	margin-bottom: 130px;
-}
+	.form-lead__text {
+		margin-top: 10px;
+		margin-bottom: 50px;
+	}
 
-.form-input {
-	min-height: 40px;
-    padding: 0;
-    width: 100%;
-    margin-right: 0;
-    margin-bottom: 20px;
-    box-sizing: border-box;
+	.form {
+		margin-bottom: 130px;
+	}
 
-    font-family: "PT Sans", "Arial", sans-serif;
-    font-weight: 400;
-    font-size: 20px;
-    outline: none;
+	.form-input {
+		min-height: 40px;
+	    padding: 0;
+	    width: 100%;
+	    margin-right: 0;
+	    margin-bottom: 20px;
+	    box-sizing: border-box;
 
-    border: none;
-    border-bottom: 1px solid #eec643;
-    background-color: transparent;
-    transition: border 0.2s ease;
-}
+	    outline: none;
 
-.form-input:hover {
-	border-bottom: 1px solid #d8aa13;
-}
+	    border: none;
+	    border-bottom: 2px solid #eec643;
+	    background-color: transparent;
+	    transition: border 0.2s ease;
+	}
+
+	.form-input:placeholder {
+		color: #596063;
+	}
+
+	.form-input:hover {
+		border-bottom: 2px solid #000;
+	}
+
+	.form-input__brd-color {
+		border-bottom: 2px solid #000;
+	}
+
+	.form-input__brd-color:hover {
+		border-bottom: 2px solid #eec643;
+	}
+
+	.form-select {
+	  border-bottom: 2px solid #eec643;
+	  border-top: 0;
+	  border-left: 0;
+	  border-right: 0;
+	  padding: 7px 0;
+
+	  width: 100%;
+	  outline: none;
+
+	  color: #000;
+	  overflow: hidden;
+
+	  -webkit-appearance: button;
+	  -webkit-border-radius: 2px;
+	  -webkit-padding-end: 20px;
+	  -webkit-padding-start: 2px;
+	  -webkit-user-select: none;
+
+	  background-color: white;
+	  background-image: url("../img/selector-button.svg");
+	  background-position: 100% center;
+	  background-repeat: no-repeat;
+	  background-position: 97% center;
+
+	  transition: border 0.2s ease;
+	}
+
+	.form-select .form-select-option {
+	  position: relative;
+	}
+
+	.form-select:hover {
+	  border-bottom: 2px solid #000;
+	}
+
+	.form-select__brd-color {
+		border-bottom: 2px solid #000;
+	}
+
+	.form-select__brd-color:hover {
+		border-bottom: 2px solid #eec643;
+	}
+
+	.form-select::placeholder {
+		color: #596063;
+	}
 
 
 /*------------------------------ НАПРАВЛЕНИЯ -------------------------------*/
@@ -925,7 +995,7 @@ body { overflow: -moz-scrollbars-none; }
 		order: 2;
 	}*/
 
-	.col--lg-2:nth-child(2) {
+	.courses .col--lg-2:nth-child(2) {
 		order: 1;
 	}
 
@@ -933,11 +1003,11 @@ body { overflow: -moz-scrollbars-none; }
 		order: 3;
 	}
 
-	.col--lg-1:first-child {
+	.courses .col--lg-1:first-child {
 		order: 4;
 	}
 
-	.col--lg-1:last-child {
+	.courses .col--lg-1:last-child {
 		order: 5;
 	}
 
@@ -978,6 +1048,7 @@ body { overflow: -moz-scrollbars-none; }
 
 		font-weight: bold;
 		font-size: 30px;
+		line-height: 40px;
 	    text-align: left;
 		text-decoration: none;
 		text-transform: none;
@@ -1073,7 +1144,6 @@ body { overflow: -moz-scrollbars-none; }
 		height: 100%;
 	}
 
-
 	.video .section-header {
 		position: absolute;
 		left: 15px;
@@ -1100,7 +1170,14 @@ body { overflow: -moz-scrollbars-none; }
 	}
 
 	.video-prev__header {
-		margin-bottom: 20px;
+		margin-bottom: 0;
+		font-size: 14px;
+		line-height: 14px;
+	}
+
+	.text__font-size {
+		font-size: 14px;
+		margin-top: 0;
 	}
 
 	.video-text__wrapper-small .video-prev__header {
@@ -1130,7 +1207,7 @@ body { overflow: -moz-scrollbars-none; }
 	}
 
 	.adress-wrapper p{
-		padding-top: 10px;
+		margin-top: 20px;
 	}
 
 

@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>Diez — школа музыкального искусства</title>
   <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/selectric.css">
+  <!-- <link rel="stylesheet" href="css/selectric.css"> -->
   <link rel="stylesheet" href="css/slick.css">
   <link rel="stylesheet" href="css/style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -66,18 +66,17 @@
 							<div class="form-wrapper form-wrapper__brd-color">
 								<div class="form-lead">
 									<h3 class="form-lead__header">Вводный урок</h3>
-									<p>Попробуй любые направления  бесплатно</p>
+									<p class="form-lead__text">Попробуй любые направления  бесплатно</p>
 								</div>
 								<form action="#" class="form">
-									<input class="form-input" id="name" type="text" placeholder="Имя" title="Укажите имя" required class="form-input__name">
-									<input class="form-input" id="tel" type="tel" placeholder="Телефон" title="Укажите телефон" required class="form-input__tel">
+									<input class="form-input form-input__brd-color" id="name" type="text" placeholder="Имя" title="Укажите имя" required class="form-input__name">
+									<input class="form-input form-input__brd-color" id="tel" type="tel" placeholder="Телефон" title="Укажите телефон" required class="form-input__tel">
 								<!-- тут должен быть выпадающий список -->
-									<select class="form-select" name="">
-										<option value="1">Гитара</option>
-										<option value="2">Вокал</option>
-										<option value="3">Фортепьяно</option>
+									<select class="form-select form-select__brd-color" name="">
+										<option class="form-select-option" value="1">Гитара</option>
+										<option class="form-select-option" value="2">Вокал</option>
+										<option class="form-select-option" value="3">Фортепьяно</option>
 									</select>
-					
 									<button type="submit" class="button button_color">Записаться</button>
 								</form>
 							</div>
@@ -170,16 +169,16 @@
 									<div class="form-wrapper">
 										<div class="form-lead">
 											<h3 class="form-lead__header">Вводный урок</h3>
-											<p>Попробуй любые направления  бесплатно</p>
+											<p class="form-lead__text">Попробуй любые направления  бесплатно</p>
 										</div>
 										<form action="#" class="form">
 											<input class="form-input" id="name" type="text" placeholder="Имя" title="Укажите имя" required class="form-input__name">
 											<input class="form-input" id="tel" type="tel" placeholder="Телефон" title="Укажите телефон" required class="form-input__tel">
 										<!-- тут должен быть выпадающий список -->
 											<select class="form-select" name="">
-												<option value="1">Гитара</option>
-												<option value="2">Вокал</option>
-												<option value="3">Фортепьяно</option>
+												<option class="form-select-option" value="1">Гитара</option>
+												<option class="form-select-option" value="2">Вокал</option>
+												<option class="form-select-option" value="3">Фортепьяно</option>
 											</select>
 											<button type="submit" class="button button_active">Записаться</button>
 										</form>
@@ -200,7 +199,7 @@
 						<div class="video-wrapper__big">
 							<div class="video-text__wrapper">
 								<h3 class="sub-header">Зимняя вишня</h3>
-								<p class="text__font-size"><span class="text__show-320">Финальный концерт 2018 года</span><span class="text__hide-320">Заключительный зимний концерт 2017 года
+								<p><span class="text__show-320">Финальный концерт 2018 года</span><span class="text__hide-320">Заключительный зимний концерт 2017 года
 								выступало 97 учеников</span></p>
 							</div>
 							<button class="play-button__button"><img src="img/video-play-button-icon.svg" alt="кнопка воспроизведения видео" class="play-button__img play-button__img-big"></button>
@@ -266,16 +265,16 @@
 							<div class="form-wrapper">
 								<div class="form-lead">
 									<h3 class="form-lead__header">Вводный урок</h3>
-									<p>Попробуй любые направления  бесплатно</p>
+									<p class="form-lead__text">Попробуй любые направления  бесплатно</p>
 								</div>
 								<form action="#" class="form">
 									<input class="form-input" id="name" type="text" placeholder="Имя" title="Укажите имя" required class="form-input__name">
 									<input class="form-input" id="tel" type="tel" placeholder="Телефон" title="Укажите телефон" required class="form-input__tel">
 								<!-- тут должен быть выпадающий список -->
 									<select class="form-select" name="">
-										<option value="1">Гитара</option>
-										<option value="2">Вокал</option>
-										<option value="3">Фортепьяно</option>
+										<option class="form-select-option" value="1">Гитара</option>
+										<option class="form-select-option" value="2">Вокал</option>
+										<option class="form-select-option" value="3">Фортепьяно</option>
 									</select>
 									<button type="submit" class="button button_active">Записаться</button>
 								</form>
@@ -313,7 +312,7 @@
 
 	<!-- скрипты -->
 	<script src="js/jquery-3.4.1.min.js"></script>
-	<script src="js/jquery.selectric.min.js"></script>
+	<!-- <script src="js/jquery.selectric.min.js"></script> -->
 	<script src="js/script-burger.js"></script>
 	<script src="js/slick.js"></script>
 	<script src="js/script.js"></script>
