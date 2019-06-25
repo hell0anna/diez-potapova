@@ -28,7 +28,7 @@ $(document).ready(function(){
             iconImageSize: [40, 50],
             // Смещение левого верхнего угла иконки относительно
             // её "ножки" (точки привязки).
-            iconImageOffset: [0, -20]
+            iconImageOffset: [-20, -20]
         });
 
         myMap.geoObjects.add(myPlacemark);
